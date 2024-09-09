@@ -13,7 +13,10 @@ import mimetypes
 # Define templates for different configurations
 templates = {
     "ai_assessment": "config",
-    "Zodiac Symbol": "config_zodiac"
+
+    "Zodiac Symbol": "config_zodiac",
+
+    "Student Self Assessment Suite": "config_selfassess"
 }
 
 # Select template from the sidebar
