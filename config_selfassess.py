@@ -1,3 +1,18 @@
+APP_TITLE = "Zodiac Symbol"
+
+APP_INTRO = """This is a demonstration app that determines a user's zodiac symbol based on their birth month and date."""
+
+APP_HOW_IT_WORKS = """
+This app collects the name, birth month, and birth date of the user, and provides them their Zodiac symbol. 
+It utilizes the OpenAI and other AI APIs to send a custom prompt to AI with the user's inputs and returns the AI's response.
+"""
+
+SHARED_ASSET = {}
+
+HTML_BUTTON = {}
+
+SYSTEM_PROMPT = """You are a Career advisor."""
+
 PHASES = {
     "phase1": {
         "name": "User Details",
@@ -7,7 +22,7 @@ PHASES = {
                 "label": "What is your name?",
             },
             "Domain": {
-                "type": "check_box",
+                "type": "selectbox",
                 "label": "Choose your Domain",
                 "options": [
                     "STEM (Science, Technology, Engineering, Mathematics)",
@@ -24,7 +39,7 @@ PHASES = {
                 ]
             },
             "Subdomain": {
-                "type": "check_box",
+                "type": "selectbox",
                 "label": "Choose your Sub Domain",
                 "options": [],  # Options will be populated based on the domain selected
                 "showIf": {
@@ -44,7 +59,7 @@ PHASES = {
                 }
             },
             "Roles": {
-                "type": "check_box",
+                "type": "selectbox",
                 "label": "Choose your Role",
                 "options": [],  # Options will be populated based on the subdomain selected
                 "showIf": {
@@ -193,3 +208,12 @@ PHASES = {
         "allow_skip": True
     }
 }
+
+PREFERRED_LLM = "gpt-4o-mini"
+LLM_CONFIG_OVERRIDE = {}
+
+SCORING_DEBUG_MODE = True
+DISPLAY_COST = True
+
+COMPLETION_MESSAGE = "You've reached the end! I hope you learned something!"
+COMPLETION_CELEBRATION = False
