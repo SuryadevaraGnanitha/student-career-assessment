@@ -16,7 +16,9 @@ templates = {
 
     "Zodiac Symbol": "config_zodiac",
 
-    "Student Self Assessment Suite": "config_selfassess"
+    "Student Self Assessment Suite": "config_selfassess",
+
+    "Career path": "config_career_path"
 }
 
 # Select template from the sidebar
