@@ -140,7 +140,81 @@ PHASES = {
                 "options": ["Physics","telecommunication","Computer Science"],
                 "showIf": {"PhD Domain": "STEM"}
             },
-
+            
+            "Data Engineering Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["ETL Developer","DataOps Engineer","Data Architect"],
+                "showIf": {"Data Science Sub Domain": "Data Engineering"}
+            }, 
+            
+            "Data Mining Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Data Mining Analyst","Business Intelligence (BI) Analyst","Big Data Engineer"],
+                "showIf": {"Data Science Sub Domain": "Data Mining"}
+            }, 
+            
+            "Finance Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Investment Banker","Financial Analyst"],
+                "showIf": {"Bussiness and management Sub Domain": "Finance"}
+            }, 
+            
+            "Marketing Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Marketing Manager","Brand Manager"],
+                "showIf": {"Bussiness and management Sub Domain": "Marketing"}
+            }, 
+            
+            "Philosophy Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Philosophy Researcher","Philosophical Counselor"],
+                "showIf": {"Arts and Humanity Sub Domain": "Philosophy"}
+            }, 
+            
+            "History Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Historian","Archivist"],
+                "showIf": {"Arts and Humanity Sub Domain": "History"}
+            }, 
+            
+            "Software Deveopment Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Front-End Developer","Back-End Developer","Mobile App Developer"],
+                "showIf": {"Information Technology Sub Domain": "Software Deveopment"}
+            }, 
+            
+            "Cyber Security Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Security Consultant","Security Engineer","Security Consultant"],
+                "showIf": {"Information Technology Sub Domain": "Cyber Security"}
+            }, 
+            
+            "NLP Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["NLP Research Scientist","Computational Linguist","NLP Engineer"],
+                "showIf": {"AIML Sub Domain": "NLP"}
+            }, 
+            
+            "machine learning Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Machine Learning Engineer","ML Research Scientist","ML Ops Engineer"],
+                "showIf": {"AIML Sub Domain": "machine learning"}
+            }, 
+            
+            
+            
+            
+            
 
             "current_field": {
                 "type": "text_input",
