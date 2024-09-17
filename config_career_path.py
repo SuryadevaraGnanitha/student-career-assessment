@@ -63,6 +63,13 @@ PHASES = {
                 "options": ["Health Sciences", "STEM","Inter disciplinary and Emerging fields"],
                 "showIf": {"education_level": "PhD"}
             },
+            
+            "Inter disciplinary and Emerging fields Sub Domain": {
+                "type": "radio",
+                "label": "Please select your sub domain",
+                "options": ["Neuroscience","Biotechnology"],
+                "showIf": {"PhD Domain": "Inter disciplinary and Emerging fields"}
+            },
 
             "Data Science Sub Domain": {
                 "type": "radio",
@@ -113,7 +120,7 @@ PHASES = {
                 "showIf": {"Master's Degree Domain": "Health"}
             },
 
-            "STEM Sub Domain": {
+            "STEM-masters Sub Domain": {
                 "type": "radio",
                 "label": "Please select your sub domain",
                 "options": ["Physics","telecommunication","Computer Science"],
@@ -124,7 +131,7 @@ PHASES = {
                 "type": "radio",
                 "label": "Please select your sub domain",
                 "options": ["Crminal law","civil law"],
-                "showIf": {"Master's Degree Domain": "law and legal"}
+                "showIf": {"Master's Degree Domain": "law and legal Studies"}
             },
 
             "Health Sciences Sub Domain": {
@@ -211,7 +218,120 @@ PHASES = {
                 "showIf": {"AIML Sub Domain": "machine learning"}
             }, 
             
+            "Health Care IOT Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Clinical IoT Data Analyst","Telemedicine IoT Developer","Remote Patient Monitoring Specialist"],
+                "showIf": {"IOT Sub Domain": "Health Care IOT"}
+            }, 
             
+            "Agricultural IOT Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Agricultural IoT Engineer","Smart Irrigation Systems Engineer"],
+                "showIf": {"IOT Sub Domain": "Agricultural IOT"}
+            }, 
+            
+            "Pharmacy Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Pharmacist","Pharmacy Technician"],
+                "showIf": {"Health Sub Domain": "Pharmacy"}
+            }, 
+            
+            "Dental Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Orthodontist","Dentist"],
+                "showIf": {"Health Sub Domain": "Dental"}
+            }, 
+            
+            "Physics Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Physicist","Astrophysicist"],
+                "showIf": {"STEM-masters Sub Domain": "Physics"}
+            }, 
+            
+            "telecommunication Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Telecommunications Engineer","Network Architect"],
+                "showIf": {"STEM-masters Sub Domain": "telecommunication"}
+            }, 
+            
+            "Computer Science Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["DevOps Engineer","Cloud Engineer"],
+                "showIf": {"STEM-masters Sub Domain": "Computer Science"}
+            }, 
+            
+            "Crminal law Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Criminal Defense Attorney","Public Defender"],
+                "showIf": {"law and legal Sub Domain": "Crminal law"}
+            }, 
+            
+            "civil law Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Civil Rights Attorney","Contract Lawyer"],
+                "showIf": {"law and legal Sub Domain": "civil law"}
+            }, 
+            
+            "Dental-phd Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Dentist","Dental Hygienist"],
+                "showIf": {"Health Sciences Sub Domain": "Dental"}
+            }, 
+            
+            "Pharmacy-phd Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Pharmacist","Clinical Pharmacist"],
+                "showIf": {"Health Sciences Sub Domain": "Pharmacy"}
+            }, 
+            
+            "Physics-PhD Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Physicist","Astrophysicist"],
+                "showIf": {"STEM Sub Domain": "Physics"}
+            }, 
+            
+            "telecommunication-PhD Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Telecommunications Engineer","Network Architect"],
+                "showIf": {"STEM Sub Domain": "telecommunication"}
+            }, 
+            
+            "Computer Science-PhD Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["DevOps Engineer","Cloud Engineer"],
+                "showIf": {"STEM Sub Domain": "Computer Science"}
+            
+            },
+            
+            "Neuroscience-PhD Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Neurobiologist","Neuroscientist"],
+                "showIf": {"Inter disciplinary and Emerging fields Sub Domain": "Neuroscience"}
+            
+            },
+            
+            "Biotechnology-PhD Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Biotechnologist","Geneticist"],
+                "showIf": {"Inter disciplinary and Emerging fields Sub Domain": "Biotechnology"}
+            
+            },
             
             
             
