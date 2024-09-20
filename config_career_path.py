@@ -23,13 +23,6 @@ PHASES = {
                 "helper": "First name only, please",
                 "value": "Jane"
             },
-            "age": {
-                "type": "number_input",
-                "label": "What is your age?",
-                "min_value": 16,
-                "max_value": 65,
-                "value": 25
-            },
             "education_level": {
                 "type": "radio",
                 "label": "What is your highest level of education?",
@@ -62,6 +55,13 @@ PHASES = {
                 "label": "Please select your domain",
                 "options": ["Health Sciences", "STEM","Inter disciplinary and Emerging fields"],
                 "showIf": {"education_level": "PhD"}
+            },
+            
+            "Inter disciplinary and Emerging fields Sub Domain": {
+                "type": "radio",
+                "label": "Please select your sub domain",
+                "options": ["Neuroscience","Biotechnology"],
+                "showIf": {"PhD Domain": "Inter disciplinary and Emerging fields"}
             },
 
             "Data Science Sub Domain": {
@@ -113,7 +113,7 @@ PHASES = {
                 "showIf": {"Master's Degree Domain": "Health"}
             },
 
-            "STEM Sub Domain": {
+            "STEM-masters Sub Domain": {
                 "type": "radio",
                 "label": "Please select your sub domain",
                 "options": ["Physics","telecommunication","Computer Science"],
@@ -124,7 +124,7 @@ PHASES = {
                 "type": "radio",
                 "label": "Please select your sub domain",
                 "options": ["Crminal law","civil law"],
-                "showIf": {"Master's Degree Domain": "law and legal"}
+                "showIf": {"Master's Degree Domain": "law and legal Studies"}
             },
 
             "Health Sciences Sub Domain": {
@@ -140,30 +140,218 @@ PHASES = {
                 "options": ["Physics","telecommunication","Computer Science"],
                 "showIf": {"PhD Domain": "STEM"}
             },
+            
+            "Data Engineering Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["ETL Developer","DataOps Engineer","Data Architect"],
+                "showIf": {"Data Science Sub Domain": "Data Engineering"}
+            }, 
+            
+            "Data Mining Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Data Mining Analyst","Business Intelligence (BI) Analyst","Big Data Engineer"],
+                "showIf": {"Data Science Sub Domain": "Data Mining"}
+            }, 
+            
+            "Finance Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Investment Banker","Financial Analyst"],
+                "showIf": {"Bussiness and management Sub Domain": "Finance"}
+            }, 
+            
+            "Marketing Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Marketing Manager","Brand Manager"],
+                "showIf": {"Bussiness and management Sub Domain": "Marketing"}
+            }, 
+            
+            "Philosophy Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Philosophy Researcher","Philosophical Counselor"],
+                "showIf": {"Arts and Humanity Sub Domain": "Philosophy"}
+            }, 
+            
+            "History Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Historian","Archivist"],
+                "showIf": {"Arts and Humanity Sub Domain": "History"}
+            }, 
+            
+            "Software Deveopment Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Front-End Developer","Back-End Developer","Mobile App Developer"],
+                "showIf": {"Information Technology Sub Domain": "Software Deveopment"}
+            }, 
+            
+            "Cyber Security Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Security Consultant","Security Engineer","Security Consultant"],
+                "showIf": {"Information Technology Sub Domain": "Cyber Security"}
+            }, 
+            
+            "NLP Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["NLP Research Scientist","Computational Linguist","NLP Engineer"],
+                "showIf": {"AIML Sub Domain": "NLP"}
+            }, 
+            
+            "machine learning Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Machine Learning Engineer","ML Research Scientist","ML Ops Engineer"],
+                "showIf": {"AIML Sub Domain": "machine learning"}
+            }, 
+            
+            "Health Care IOT Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Clinical IoT Data Analyst","Telemedicine IoT Developer","Remote Patient Monitoring Specialist"],
+                "showIf": {"IOT Sub Domain": "Health Care IOT"}
+            }, 
+            
+            "Agricultural IOT Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Agricultural IoT Engineer","Smart Irrigation Systems Engineer"],
+                "showIf": {"IOT Sub Domain": "Agricultural IOT"}
+            }, 
+            
+            "Pharmacy Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Pharmacist","Pharmacy Technician"],
+                "showIf": {"Health Sub Domain": "Pharmacy"}
+            }, 
+            
+            "Dental Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Orthodontist","Dentist"],
+                "showIf": {"Health Sub Domain": "Dental"}
+            }, 
+            
+            "Physics Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Physicist","Astrophysicist"],
+                "showIf": {"STEM-masters Sub Domain": "Physics"}
+            }, 
+            
+            "telecommunication Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Telecommunications Engineer","Network Architect"],
+                "showIf": {"STEM-masters Sub Domain": "telecommunication"}
+            }, 
+            
+            "Computer Science Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["DevOps Engineer","Cloud Engineer"],
+                "showIf": {"STEM-masters Sub Domain": "Computer Science"}
+            }, 
+            
+            "Crminal law Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Criminal Defense Attorney","Public Defender"],
+                "showIf": {"law and legal Sub Domain": "Crminal law"}
+            }, 
+            
+            "civil law Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Civil Rights Attorney","Contract Lawyer"],
+                "showIf": {"law and legal Sub Domain": "civil law"}
+            }, 
+            
+            "Dental-phd Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Dentist","Dental Hygienist"],
+                "showIf": {"Health Sciences Sub Domain": "Dental"}
+            }, 
+            
+            "Pharmacy-phd Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Pharmacist","Clinical Pharmacist"],
+                "showIf": {"Health Sciences Sub Domain": "Pharmacy"}
+            }, 
+            
+            "Physics-PhD Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Physicist","Astrophysicist"],
+                "showIf": {"STEM Sub Domain": "Physics"}
+            }, 
+            
+            "telecommunication-PhD Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Telecommunications Engineer","Network Architect"],
+                "showIf": {"STEM Sub Domain": "telecommunication"}
+            }, 
+            
+            "Computer Science-PhD Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["DevOps Engineer","Cloud Engineer"],
+                "showIf": {"STEM Sub Domain": "Computer Science"}
+            
+            },
+            
+            "Neuroscience-PhD Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Neurobiologist","Neuroscientist"],
+                "showIf": {"Inter disciplinary and Emerging fields Sub Domain": "Neuroscience"}
+            
+            },
+            
+            "Biotechnology-PhD Roles": {
+                "type": "radio",
+                "label": "Please select your Role",
+                "options": ["Biotechnologist","Geneticist"],
+                "showIf": {"Inter disciplinary and Emerging fields Sub Domain": "Biotechnology"}
+            
+            },
 
-
-            "current_field": {
+            "Skills":{
                 "type": "text_input",
-                "label": "What is your current field of work? (If applicable)",
-                "value": "",
-                "showIf": {"experience_years": {"$gt": 0}}
-            }
+                "label": "Please mention your skills",
+                "value": ""         
+                },
+            "Certifications":{
+                "type": "text_input",
+                "label": "Please mention your certifications Related to your domain",
+                "value": ""
+            },
+            "Academic Performance":{
+                "type": "text_input",
+                "label": "Please mention your Academic percentage",
+                "value": ""
+            },
+
+
+
+
         },
         "phase_instructions": "Please provide your basic details.",
         "user_prompt": [
             {
-                "condition": {"$and": [{"age": {"$lt": 25}}, {"education_level": "Bachelor's Degree"}]},
-                "prompt": "I am {name}, aged {age}. I recently completed my Bachelor's Degree and have {experience_years} years of experience in {current_field}. I'm eager to explore my career options."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Bachelor's Degree Domain": "Data Science"}]},
+                "prompt": "I am {name},I recently completed my Bachelor's Degree and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in Data Science. I'm eager to Know My Capability Level."
             },
-            {
-                "condition": {"$and": [{"age": {"$gte": 25}}, {"experience_years": {"$gte": 5}}]},
-                "prompt": "My name is {name}, and I am {age} years old. With a {education_level} and over {experience_years} years of experience in {current_field}, I'm seeking to advance my career to the next level."
-            },
-            {
-                "condition": {"experience_years": {"$lt": 2}},
-                "prompt": "I am {name}, {age} years old, with an education level of {education_level} and less than {experience_years} years of experience in {current_field}. I'm looking to enter a field where I can grow and gain more experience."
-            }
-        ],
         "show_prompt": True,
         "allow_skip": True
     },
