@@ -23,6 +23,13 @@ PHASES = {
                 "helper": "First name only, please",
                 "value": "Jane"
             },
+            "age": {
+                "type": "number_input",
+                "label": "What is your age?",
+                "min_value": 16,
+                "max_value": 65,
+                "value": 25
+            },
             "education_level": {
                 "type": "radio",
                 "label": "What is your highest level of education?",
@@ -315,18 +322,14 @@ PHASES = {
                 "label": "Please select your Role",
                 "options": ["Neurobiologist","Neuroscientist"],
                 "showIf": {"Inter disciplinary and Emerging fields Sub Domain": "Neuroscience"}
-            
             },
-            
             "Biotechnology-PhD Roles": {
                 "type": "radio",
                 "label": "Please select your Role",
                 "options": ["Biotechnologist","Geneticist"],
                 "showIf": {"Inter disciplinary and Emerging fields Sub Domain": "Biotechnology"}
-            
             },
-
-            "Skills":{
+           "Skills":{
                 "type": "text_input",
                 "label": "Please mention your skills",
                 "value": ""         
@@ -341,17 +344,22 @@ PHASES = {
                 "label": "Please mention your Academic percentage",
                 "value": ""
             },
-
-
-
-
         },
         "phase_instructions": "Please provide your basic details.",
-        "user_prompt": [
+         "user_prompt": [
             {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Bachelor's Degree Domain": "Data Science"}]},
-                "prompt": "I am {name},I recently completed my Bachelor's Degree and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in Data Science. I'm eager to Know My Capability Level."
+                "prompt": "I am {name},I recently completed my Bachelor's Degree and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in Data Science hand having a goal to become {Data Engineering Roles}. I'm eager to Know My Capability Level."
             },
+            {
+                "condition": {"$and": [{"age": {"$gte": 25}}, {"experience_years": {"$gte": 5}}]},
+                "prompt": "My name is {name}, and I am {age} years old. With a {education_level} and over {experience_years} years of experience in {current_field}, I'm seeking to advance my career to the next level."
+            },
+            {
+                "condition": {"experience_years": {"$lt": 2}},
+                "prompt": "I am {name}, {age} years old, with an education level of {education_level} and less than {experience_years} years of experience in {current_field}. I'm looking to enter a field where I can grow and gain more experience."
+            }
+        ],
         "show_prompt": True,
         "allow_skip": True
     },
