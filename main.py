@@ -58,7 +58,7 @@ if config_file:
         if not attr.startswith("__"):
             globals()[attr] = getattr(config_module, attr)
 else:
-    from config import *
+    from config_files.config import *
 
 # Function to merge configuration dictionaries
 def merge_configurations(defaults, overrides):
