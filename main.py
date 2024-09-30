@@ -88,7 +88,8 @@ function_map = {
     "slider": st.slider,
     "number_input": st.number_input,
     "image": st.image,
-    "file_uploader": st.file_uploader
+    "file_uploader": st.file_uploader,
+    "multiselect": st.multiselect
 }
 
 
