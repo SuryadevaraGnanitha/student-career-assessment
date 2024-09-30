@@ -243,21 +243,6 @@ PHASES = {
                 "options": ["Finance","Marketing"],
                 "showIf": {"Associate's Degree Domain": "Bussiness and management"}
             },
-
-            "Arts and Humanity Sub Domain": {
-                "type": "radio",
-                "label": "Please select your sub domain",
-                "options": ["Philosophy","History"],
-                "showIf": {"Associate's Degree Domain": "Arts and Humanity"}
-            },
-
-            "Information Technology Sub Domain": {
-                "type": "radio",
-                "label": "Please select your sub domain",
-                "options": ["Software Deveopment","Cyber Security"],
-                "showIf": {"Associate's Degree Domain": "Information Technology"}
-            },
-
             "Health Sub Domain": {
                 "type": "radio",
                 "label": "Please select your sub domain",
@@ -278,14 +263,6 @@ PHASES = {
                 "options": ["Crminal law","civil law"],
                 "showIf": {"Master's Degree Domain": "law and legal Studies"}
             },
-
-            "Health Sciences Sub Domain": {
-                "type": "radio",
-                "label": "Please select your sub domain",
-                "options": ["Dental","Pharmacy"],
-                "showIf": {"PhD Domain": "Health Sciences"}
-            },
-
             "STEM Sub Domain": {
                 "type": "radio",
                 "label": "Please select your sub domain",
@@ -1196,32 +1173,56 @@ PHASES = {
              },
 
              {
-                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Data Science Sub Domain":"Data Engineering"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Data Engineering Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Data Science Sub Domain":"Machine Learning"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Machine Learning Roles}. I'm eager to Know My Capability Level."
              },
 
-             #bachelor's,data science, data mining roles
+             #bachelor's,data science, Statistical Analysis Roles
 
              {
-                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Data Science Sub Domain":"Data Mining"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Data Mining Roles}. I'm eager to Know My Capability Level."
-             },
-
-             {
-                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Data Science Sub Domain":"Data Mining"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Data Mining Roles}. I'm eager to Know My Capability Level."
-             },
-
-             # bachelor's, AIML, NLP Roles
-
-             {
-                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"AIML Sub Domain":"NLP"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {NLP Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Data Science Sub Domain":"Statistical Analysis"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Statistical Analysis Roles}. I'm eager to Know My Capability Level."
              },
 
              {
-                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"AIML Sub Domain":"NLP"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {NLP Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Data Science Sub Domain":"Statistical Analysis"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Statistical Analysis Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # bachelor's, datascience, Data Visualization Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Data Science Sub Domain":"Data Visualization"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Data Visualization Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Data Science Sub Domain":"Data Visualization"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Data Visualization Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # bachelor's, datascience, Big Data Analytics Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Data Science Sub Domain":"Big Data Analytics"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Big Data Analytics Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Data Science Sub Domain":"Big Data Analytics"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Big Data Analytics Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # bachelor's, datascience, Big Data Analytics Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Data Science Sub Domain":"Big Data Analytics"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Big Data Analytics Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Data Science Sub Domain":"Big Data Analytics"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Big Data Analytics Roles}. I'm eager to Know My Capability Level."
              },
 
              # bachelor's , AIML, MACHINE LEARNING roles
