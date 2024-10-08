@@ -53,7 +53,7 @@ PHASES = {
             "Master's Degree Domain": {
                 "type": "radio",
                 "label": "Please select your domain",
-                "options": ["Health", "STEM","law and legal Studies","Business", "STEM", "Health Sciences", "Social Sciences", "Arts and Humanities", "Education"],
+                "options": ["STEM","law and legal Studies","Business", "STEM", "Health Sciences", "Social Sciences", "Arts and Humanities", "Education"],
                 "showIf": {"education_level": "Master's Degree"}
             },
 
@@ -1213,269 +1213,948 @@ PHASES = {
                 "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Big Data Analytics Roles}. I'm eager to Know My Capability Level."
              },
 
-             # bachelor's, datascience, Big Data Analytics Roles
+             # bachelor's, datascience, Predictive Modeling Roles
 
              {
-                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Data Science Sub Domain":"Big Data Analytics"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Big Data Analytics Roles}. I'm eager to Know My Capability Level."
-             },
-
-             {
-                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Data Science Sub Domain":"Big Data Analytics"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Big Data Analytics Roles}. I'm eager to Know My Capability Level."
-             },
-
-             # bachelor's , AIML, MACHINE LEARNING roles
-
-             {
-                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"AIML Sub Domain":"machine learning"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {machine learning Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Data Science Sub Domain":"Predictive Modeling"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Predictive Modeling Roles}. I'm eager to Know My Capability Level."
              },
 
              {
-                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"AIML Sub Domain":"machine learning"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {machine learning Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Data Science Sub Domain":"Predictive Modeling"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Predictive Modeling Roles}. I'm eager to Know My Capability Level."
              },
 
-             # bachelor's , IOT, Health Care IOT Roles
+             # bachelor's, datascience,Natural Language Processing Roles
 
              {
-                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"IOT Sub Domain":"Health Care IOT"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Health Care IOT Roles}. I'm eager to Know My Capability Level."
-             },
-
-             {
-                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"IOT Sub Domain":"Health Care IOT"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Health Care IOT Roles}. I'm eager to Know My Capability Level."
-             },
-
-             # bachelor's , IOT, Agricultural IOT Roles
-
-             {
-                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"IOT Sub Domain":"Agricultural IOT"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Agricultural IOT Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Data Science Sub Domain":"Natural Language Processing"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Natural Language Processing Roles}. I'm eager to Know My Capability Level."
              },
 
              {
-                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"IOT Sub Domain":"Agricultural IOT"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Agricultural IOT Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Data Science Sub Domain":"Natural Language Processing"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Natural Language Processing Roles}. I'm eager to Know My Capability Level."
              },
 
-             #ASSOICIATE,business and management,finance roles
+             # bachelor's , AIML, deep LEARNING roles
 
-            {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Bussiness and management Sub Domain":"Finance"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Finance Roles}. I'm eager to Know My Capability Level."
-             },
              {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Bussiness and management Sub Domain":"Finance"}]},
-                  "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Finance Roles} . I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"AIML Sub Domain":"Deep Learning"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Deep Learning Roles}. I'm eager to Know My Capability Level."
              },
 
-             #ASSOICIATE,business and management,Marketing Roles
-
-            {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Bussiness and management Sub Domain":"Marketing"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Marketing Roles}. I'm eager to Know My Capability Level."
-             },
              {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Bussiness and management Sub Domain":"Marketing"}]},
-                  "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Marketing Roles} . I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"AIML Sub Domain":"Deep Learning"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Deep Learning Roles}. I'm eager to Know My Capability Level."
              },
 
-            #ASSOICIATE,Arts and Humanity,philosophy
+             # bachelor's , AIML, computer vision roles
 
-            {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Arts and Humanity Sub Domain":"Philosophy"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Philosophy Roles}. I'm eager to Know My Capability Level."
-             },
              {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Arts and Humanity Sub Domain":"Philosophy"}]},
-                  "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Philosophy Roles} . I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"AIML Sub Domain":"Computer Vision"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Computer Vision Roles}. I'm eager to Know My Capability Level."
              },
 
-             #ASSOICIATE,Arts and Humanity,History
-
-            {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Arts and Humanity Sub Domain":"History"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {History Roles}. I'm eager to Know My Capability Level."
-             },
              {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Arts and Humanity Sub Domain":"History"}]},
-                  "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {History Roles} . I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"AIML Sub Domain":"Deep Learning"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Computer Vision Roles}. I'm eager to Know My Capability Level."
              },
 
-             #ASSOICIATE,Information technology,Software Deveopment
+             # bachelor's , AIML, Reinforcement Learning roles
 
-            {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Information Technology Sub Domain":"Software Deveopment"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Software Deveopment Roles}. I'm eager to Know My Capability Level."
-             },
              {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Information Technology Sub Domain":"Software Deveopment"}]},
-                  "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Software Deveopment Roles} . I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"AIML Sub Domain":"Reinforcement Learning"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Reinforcement Learning Roles}. I'm eager to Know My Capability Level."
              },
 
-             #ASSOICIATE,Information technology,Cyber Security
-
-            {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Information Technology Sub Domain":"Cyber Security"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Cyber Security Roles}. I'm eager to Know My Capability Level."
-             },
              {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Information Technology Sub Domain":"Cyber Security"}]},
-                  "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Cyber Security Roles} . I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"AIML Sub Domain":"Reinforcement Learning"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Reinforcement Learning Roles}. I'm eager to Know My Capability Level."
              },
 
-             #MASTER'S,HEALTH,PHARMACY
+             # bachelor's , AIML, Neural Networks roles
+
              {
-                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Offline"},{"Health Sub Domain":"Pharmacy"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Pharmacy Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"AIML Sub Domain":"Neural Networks"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Neural Networks Roles}. I'm eager to Know My Capability Level."
              },
+
              {
-                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Online"},{"Health Sub Domain":"Pharmacy"}]},
-                  "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Pharmacy Roles} . I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"AIML Sub Domain":"Neural Networks"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Neural Networks Roles}. I'm eager to Know My Capability Level."
              },
+
+             # bachelor's , AIML, Expert Systems roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"AIML Sub Domain":"Expert Systems"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Expert Systems Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"AIML Sub Domain":"Expert Systems"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Expert Systems Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # bachelor's , AIML, Genetic Algorithms roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"AIML Sub Domain":"Genetic Algorithms"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Genetic Algorithms Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"AIML Sub Domain":"Genetic Algorithms"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Genetic Algorithms Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # bachelor's , IOT, Embedded Systems roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"IOT Sub Domain":"Embedded Systems"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Embedded Systems Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"IOT Sub Domain":"Embedded Systems"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Embedded Systems Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # bachelor's , IOT, Sensor Networks Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"IOT Sub Domain":"Sensor Networks"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Sensor Networks Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"IOT Sub Domain":"Sensor Networks"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Sensor Networks Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # bachelor's , IOT, Edge Computing Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"IOT Sub Domain":"Edge Computing"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Edge Computing Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"IOT Sub Domain":"Edge Computing"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Edge Computing Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # bachelor's , IOT, IoT Security Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"IOT Sub Domain":"IoT Security"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {IoT Security Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"IOT Sub Domain":"IoT Security"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {IoT Security Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # bachelor's , IOT, Sensor Networks Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"IOT Sub Domain":"Sensor Networks"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Sensor Networks Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"IOT Sub Domain":"Sensor Networks"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Sensor Networks Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's , IOT, IoT Protocols Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"IOT Sub Domain":"IoT Protocols"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {IoT Protocols Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"IOT Sub Domain":"IoT Protocols"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {IoT Protocols Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # bachelor's , IOT, Smart Home/City Technologies Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"IOT Sub Domain":"Smart Home/City Technologies"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Smart Home/City Technologies Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"IOT Sub Domain":"Smart Home/City Technologies"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Smart Home/City Technologies Roles}. I'm eager to Know My Capability Level."
+             },
+
              
-             #MASTER'S HEALTH,DENTAL
-
-             {
-                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Offline"},{"Health Sub Domain":"Dental"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Dental Roles}. I'm eager to Know My Capability Level."
-             },
-             {
-                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Online"},{"Health Sub Domain":"Dental"}]},
-                  "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Dental Roles} . I'm eager to Know My Capability Level."
-             },
-
-             #MASTER'S,STEM,Physics
-             {
-                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Offline"},{"STEM-masters Sub Domain":"Physics"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Physics Roles}. I'm eager to Know My Capability Level."
-             },
-             {
-                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Online"},{"STEM-masters Sub Domain":"Physics"}]},
-                  "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Physics Roles} . I'm eager to Know My Capability Level."
-             },
              
-             #MASTER'S, STEM,telecommunication
+             # bachelor's ,Cyber Security , Network Security Roles
 
              {
-                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Offline"},{"STEM-masters Sub Domain":"telecommunication"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {telecommunication Roles}. I'm eager to Know My Capability Level."
-             },
-             {
-                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Online"},{"STEM-masters Sub Domain":"telecommunication"}]},
-                  "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {telecommunication Roles} . I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cyber Security Sub Domain":"Network Security"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Network Security Roles}. I'm eager to Know My Capability Level."
              },
 
-             #MASTER'S, STEM,Computer Science
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cyber Security Sub Domain":"Network Security"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Network Security Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Cyber Security , Application Security Roles
 
              {
-                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Offline"},{"STEM-masters Sub Domain":"Computer Science"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Computer Science Roles}. I'm eager to Know My Capability Level."
-             },
-             {
-                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Online"},{"STEM-masters Sub Domain":"Computer Science"}]},
-                  "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Computer Science Roles} . I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cyber Security Sub Domain":"Application Security"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Application Security Roles}. I'm eager to Know My Capability Level."
              },
 
-             #MASTER'S,law and legal Studies,Crminal law
              {
-                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Offline"},{"law and legal Sub Domain":"Crminal law"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Crminal law Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cyber Security Sub Domain":"Application Security"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Application Security Roles}. I'm eager to Know My Capability Level."
              },
-             {
-                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Online"},{"law and legal Sub Domain":"Crminal law"}]},
-                  "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Crminal law Roles} . I'm eager to Know My Capability Level."
-             },
-             
-             #MASTER'S,law and legal Studies,civil law
+             # bachelor's ,Cyber Security ,Information Security Roles
 
              {
-                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Offline"},{"law and legal Sub Domain":"civil law"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {civil law Roles}. I'm eager to Know My Capability Level."
-             },
-             {
-                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Online"},{"law and legal Sub Domain":"civil law"}]},
-                  "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {civil law Roles} . I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cyber Security Sub Domain":"Information Security"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Information Security Roles}. I'm eager to Know My Capability Level."
              },
 
-             #PhD,Health Sciences,Dental
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cyber Security Sub Domain":"Information Security"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Information Security Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Cyber Security ,Cryptography Roles
 
              {
-                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Offline"},{"Health Sciences Sub Domain":"Dental"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Dental-phd Roles}. I'm eager to Know My Capability Level."
-             },
-             {
-                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Online"},{"Health Sciences Sub Domain":"Dental"}]},
-                  "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Dental-phd Roles} . I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cyber Security Sub Domain":"Cryptography"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Cryptography Roles}. I'm eager to Know My Capability Level."
              },
 
-             #PhD,Health Sciences,Pharmacy
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cyber Security Sub Domain":"Cryptography"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Cryptography Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Cyber Security ,Ethical Hacking Roles
 
              {
-                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Offline"},{"Health Sciences Sub Domain":"Pharmacy"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Pharmacy-phd Roles}. I'm eager to Know My Capability Level."
-             },
-             {
-                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Online"},{"Health Sciences Sub Domain":"Pharmacy"}]},
-                  "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Pharmacy-phd Roles} . I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cyber Security Sub Domain":"Ethical Hacking"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Ethical Hacking Roles}. I'm eager to Know My Capability Level."
              },
 
-             #PhD,STEM,PHYSICS
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cyber Security Sub Domain":"Ethical Hacking"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Ethical Hacking Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Cyber Security ,Incident Response and Forensics Roles
 
              {
-                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Offline"},{"STEM Sub Domain":"Physics"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Physics-PhD Roles}. I'm eager to Know My Capability Level."
-             },
-             {
-                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Online"},{"STEM Sub Domain":"Physics"}]},
-                  "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Physics-PhD Roles} . I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cyber Security Sub Domain":"Incident Response and Forensics"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Incident Response and Forensics Roles}. I'm eager to Know My Capability Level."
              },
 
-              #PhD,STEM,telecommunication
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cyber Security Sub Domain":"Incident Response and Forensics"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Incident Response and Forensics Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Cloud Computing ,Infrastructure as a Service (IaaS) Roles
 
              {
-                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Offline"},{"STEM Sub Domain":"telecommunication"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {telecommunication-PhD Roles}. I'm eager to Know My Capability Level."
-             },
-             {
-                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Online"},{"STEM Sub Domain":"telecommunication"}]},
-                  "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {telecommunication-PhD Roles} . I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cloud Computing Sub Domain":"Infrastructure as a Service (IaaS)"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Infrastructure as a Service (IaaS) Roles}. I'm eager to Know My Capability Level."
              },
 
-              #PhD,STEM,Computer Science
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cloud Computing Sub Domain":"Infrastructure as a Service (IaaS)"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Infrastructure as a Service (IaaS) Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Cloud Computing ,Platform as a Service (PaaS) Roles
 
              {
-                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Offline"},{"STEM Sub Domain":"Computer Science"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Computer Science-PhD Roles}. I'm eager to Know My Capability Level."
-             },
-             {
-                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Online"},{"STEM Sub Domain":"Computer Science"}]},
-                  "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Computer Science-PhD Roles} . I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cloud Computing Sub Domain":"Platform as a Service (PaaS)"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Platform as a Service (PaaS) Roles}. I'm eager to Know My Capability Level."
              },
 
-             #PhD,Inter disciplinary and Emerging fields,NEURO SCIENCE
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cloud Computing Sub Domain":"Platform as a Service (PaaS)"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Platform as a Service (PaaS) Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Cloud Computing ,Software as a Service (SaaS) Roles
 
              {
-                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Offline"},{"Inter disciplinary and Emerging fields Sub Domain":"Neuroscience"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Neuroscience-PhD Roles}. I'm eager to Know My Capability Level."
-             },
-             {
-                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Online"},{"Inter disciplinary and Emerging fields Sub Domain":"Neuroscience"}]},
-                  "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Neuroscience-PhD Roles} . I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cloud Computing Sub Domain":"Software as a Service (SaaS)"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Software as a Service (SaaS) Roles}. I'm eager to Know My Capability Level."
              },
 
-             #PhD,Inter disciplinary and Emerging fields,NEURO SCIENCE
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cloud Computing Sub Domain":"Software as a Service (SaaS)"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Software as a Service (SaaS) Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Cloud Computing ,Cloud Architecture Roles
 
              {
-                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Offline"},{"Inter disciplinary and Emerging fields Sub Domain":"Biotechnology"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Biotechnology-PhD Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cloud Computing Sub Domain":"Cloud Architecture"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Cloud Architecture Roles}. I'm eager to Know My Capability Level."
              },
+
              {
-                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Online"},{"Inter disciplinary and Emerging fields Sub Domain":"Biotechnology"}]},
-                  "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Biotechnology-PhD Roles} . I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cloud Computing Sub Domain":"Cloud Architecture"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Cloud Architecture Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Cloud Computing ,Serverless Computing Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cloud Computing Sub Domain":"Serverless Computing"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Serverless Computing Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cloud Computing Sub Domain":"Serverless Computing"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Serverless Computing Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Cloud Computing ,Multi-cloud and Hybrid Cloud Solutions Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cloud Computing Sub Domain":"Multi-cloud and Hybrid Cloud Solutions"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Multi-cloud and Hybrid Cloud Solutions Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cloud Computing Sub Domain":"Multi-cloud and Hybrid Cloud Solutions"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Multi-cloud and Hybrid Cloud Solutions Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Full Stack Development,Front-end Development Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Full Stack Development Sub Domain":"Front-end Development"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Front-end Development Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Full Stack Development Sub Domain":"Front-end Development"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Front-end Development Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Full Stack Development,Back-end Development Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Full Stack Development Sub Domain":"Back-end Development"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Back-end Development Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Full Stack Development Sub Domain":"Back-end Development"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Back-end Development Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Full Stack Development,Database Management Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Full Stack Development Sub Domain":"Database Management"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Database Management Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Full Stack Development Sub Domain":"Database Management"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Database Management Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Full Stack Development,API Development Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Full Stack Development Sub Domain":"API Development"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {API Development Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Full Stack Development Sub Domain":"API Development"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {API Development Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Full Stack Development,Web Security Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Full Stack Development Sub Domain":"Web Security"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Web Security Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Full Stack Development Sub Domain":"Web Security"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Web Security Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Full Stack Development,User Experience (UX) Design Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Full Stack Development Sub Domain":"User Experience (UX) Design"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {User Experience (UX) Design Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Full Stack Development Sub Domain":"User Experience (UX) Design"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {User Experience (UX) Design Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,DevOps,Continuous Integration/Continuous Deployment (CI/CD) Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"DevOps Sub Domain":"Continuous Integration/Continuous Deployment (CI/CD)"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Continuous Integration/Continuous Deployment (CI/CD) Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"DevOps Sub Domain":"Continuous Integration/Continuous Deployment (CI/CD)"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Continuous Integration/Continuous Deployment (CI/CD) Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,DevOps,Infrastructure as Code Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"DevOps Sub Domain":"Infrastructure as Code"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Infrastructure as Code Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"DevOps Sub Domain":"Infrastructure as Code"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Infrastructure as Code Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,DevOps,Configuration Management Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"DevOps Sub Domain":"Configuration Management"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Configuration Management Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"DevOps Sub Domain":"Configuration Management"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Configuration Management Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,DevOps,Containerization Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"DevOps Sub Domain":"Containerization"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Containerization Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"DevOps Sub Domain":"Containerization"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Containerization Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,DevOps,Orchestration Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"DevOps Sub Domain":"Orchestration"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Orchestration Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"DevOps Sub Domain":"Orchestration"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Orchestration Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,DevOps,Monitoring and Logging Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"DevOps Sub Domain":"Monitoring and Logging"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Monitoring and Logging Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"DevOps Sub Domain":"Monitoring and Logging"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Monitoring and Logging Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Blockchain,Distributed Ledger Technology Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Blockchain Sub Domain":"Distributed Ledger Technology"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Distributed Ledger Technology Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Blockchain Sub Domain":"Distributed Ledger Technology"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Distributed Ledger Technology Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Blockchain,Smart Contracts Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Blockchain Sub Domain":"Smart Contracts"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Smart Contracts Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Blockchain Sub Domain":"Smart Contracts"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Smart Contracts Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Blockchain,Cryptocurrency Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Blockchain Sub Domain":"Cryptocurrency"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Cryptocurrency Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Blockchain Sub Domain":"Cryptocurrency"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Cryptocurrency Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Blockchain,Decentralized Finance (DeFi) Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Blockchain Sub Domain":"Decentralized Finance (DeFi)"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Decentralized Finance (DeFi) Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Blockchain Sub Domain":"Decentralized Finance (DeFi)"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Decentralized Finance (DeFi) Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Blockchain,Consensus Mechanisms Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Blockchain Sub Domain":"Consensus Mechanisms"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Consensus Mechanisms Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Blockchain Sub Domain":"Consensus Mechanisms"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Consensus Mechanisms Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Blockchain,Blockchain Security Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Blockchain Sub Domain":"Blockchain Security"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Blockchain Security Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Blockchain Sub Domain":"Blockchain Security"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Blockchain Security Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Quantum Computing,Quantum Algorithms Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Quantum Computing Sub Domain":"Quantum Algorithms"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Algorithms Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Quantum Computing Sub Domain":"Quantum Algorithms"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Algorithms Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Quantum Computing,Quantum Error Correction Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Quantum Computing Sub Domain":"Quantum Error Correction"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Error Correction Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Quantum Computing Sub Domain":"Quantum Error Correction"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Error Correction Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Quantum Computing,Quantum Cryptography Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Quantum Computing Sub Domain":"Quantum Cryptography"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Cryptography Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Quantum Computing Sub Domain":"Quantum Cryptography"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Cryptography Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Quantum Computing,Quantum Simulation Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Quantum Computing Sub Domain":"Quantum Simulation"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Simulation Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Quantum Computing Sub Domain":"Quantum Simulation"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Simulation Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Quantum Computing,Quantum Hardware Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Quantum Computing Sub Domain":"Quantum Hardware"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Hardware Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Quantum Computing Sub Domain":"Quantum Hardware"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Hardware Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Quantum Computing,Quantum Software Development Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Quantum Computing Sub Domain":"Quantum Software Development"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Software Development Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Quantum Computing Sub Domain":"Quantum Software Development"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Software Development Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Robotics,Robot Design and Kinematics Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Robotics Sub Domain":"Robot Design and Kinematics"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Robot Design and Kinematics Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Robotics Sub Domain":"Robot Design and Kinematics"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Robot Design and Kinematics Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Robotics,Computer Vision for Robotics Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Robotics Sub Domain":"Computer Vision for Robotics"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Computer Vision for Robotics Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Robotics Sub Domain":"Computer Vision for Robotics"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Computer Vision for Robotics Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Robotics,Robot Operating System (ROS) Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Robotics Sub Domain":"Robot Operating System (ROS)"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Robot Operating System (ROS) Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Robotics Sub Domain":"Robot Operating System (ROS)"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Robot Operating System (ROS) Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Robotics,Human-Robot Interaction Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Robotics Sub Domain":"Human-Robot Interaction"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Human-Robot Interaction Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Robotics Sub Domain":"Human-Robot Interaction"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Human-Robot Interaction Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Robotics,Autonomous Navigation Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Robotics Sub Domain":"Autonomous Navigation"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Autonomous Navigation Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Robotics Sub Domain":"Autonomous Navigation"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Autonomous Navigation Roles}. I'm eager to Know My Capability Level."
+             },
+             # bachelor's ,Robotics,Soft Robotics Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Robotics Sub Domain":"Soft Robotics"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Soft Robotics Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Robotics Sub Domain":"Soft Robotics"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Soft Robotics Roles}. I'm eager to Know My Capability Level."
+             },
+
+
+             # Associate's ,Business and Management,Accounting Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Business and Management Sub Domain":"Accounting"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Accounting Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Business and Management Sub Domain":"Accounting"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Accounting Roles}. I'm eager to Know My Capability Level."
+             },
+             # Associate's ,Business and Management,Business Administration Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Business and Management Sub Domain":"Business Administration"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Business Administration Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Business and Management Sub Domain":"Business Administration"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Business Administration Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Business and Management,Marketing Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Business and Management Sub Domain":"Marketing"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Marketing Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Business and Management Sub Domain":"Marketing"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Marketing Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Business and Management,Finance Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Business and Management Sub Domain":"Finance"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Finance Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Business and Management Sub Domain":"Finance"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Finance Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Business and Management,Hospitality Management Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Business and Management Sub Domain":"Hospitality Management"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Hospitality Management Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Business and Management Sub Domain":"Hospitality Management"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Hospitality Management Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Arts and Humanities,Liberal Arts Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Arts and Humanities Sub Domain":"Liberal Arts"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Liberal Arts Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Arts and Humanities Sub Domain":"Liberal Arts"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Liberal Arts Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Arts and Humanities,Fine Arts Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Arts and Humanities Sub Domain":"Fine Arts"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Fine Arts Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Arts and Humanities Sub Domain":"Fine Arts"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Fine Arts Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Arts and Humanities,Graphic Design Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Arts and Humanities Sub Domain":"Graphic Design"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Graphic Design Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Arts and Humanities Sub Domain":"Graphic Design"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Graphic Design Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Arts and Humanities,Music Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Arts and Humanities Sub Domain":"Music"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Music Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Arts and Humanities Sub Domain":"Music"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Music Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Arts and Humanities,Theatre Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Arts and Humanities Sub Domain":"Theatre"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Theatre Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Arts and Humanities Sub Domain":"Theatre"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Theatre+ Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Information Technology,Computer Science Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Information Technology Sub Domain":"Computer Science"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Computer Science Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Information Technology Sub Domain":"Computer Science"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Computer Science Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Information Technology,Network Administration Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Information Technology Sub Domain":"Network Administration"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Network Administration Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Information Technology Sub Domain":"Network Administration"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Network Administration Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Information Technology,Web Development Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Information Technology Sub Domain":"Web Development"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Web Development Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Information Technology Sub Domain":"Web Development"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Web Development Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Information Technology,Cybersecurity Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Information Technology Sub Domain":"Cybersecurity"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Cybersecurity Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Information Technology Sub Domain":"Cybersecurity"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Cybersecurity Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Information Technology,Database Management Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Information Technology Sub Domain":"Database Management"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Database Management Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Information Technology Sub Domain":"Database Management"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Database Management Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Health Sciences,Nursing Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Health Sciences Sub Domain":"Nursing"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Nursing Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Health Sciences Sub Domain":"Nursing"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Nursing Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Health Sciences,Medical Assisting Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Health Sciences Sub Domain":"Medical Assisting"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Medical Assisting Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Health Sciences Sub Domain":"Medical Assisting"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Medical Assisting Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Health Sciences,Dental Hygiene Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Health Sciences Sub Domain":"Dental Hygiene"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Dental Hygiene Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Health Sciences Sub Domain":"Dental Hygiene"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Dental Hygiene Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Health Sciences,Radiologic Technology Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Health Sciences Sub Domain":"Radiologic Technology"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Radiologic Technology Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Health Sciences Sub Domain":"Radiologic Technology"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Radiologic Technology Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Health Sciences,Emergency Medical Services Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Health Sciences Sub Domain":"Emergency Medical Services"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Emergency Medical Services Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Health Sciences Sub Domain":"Emergency Medical Services"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Emergency Medical Services Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Social Sciences,Psychology Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Social Sciences Sub Domain":"Nursing"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Psychology Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Social Sciences Sub Domain":"Nursing"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Psychology Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Social Sciences,Social Sciences Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Social Sciences Sub Domain":"Sociology"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Sociology Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Social Sciences Sub Domain":"Sociology"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Sociology Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Social Sciences,Criminal Justice Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Social Sciences Sub Domain":"Criminal Justice"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Criminal Justice Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Social Sciences Sub Domain":"Criminal Justice"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Criminal Justice Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Social Sciences,Early Childhood Education Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Social Sciences Sub Domain":"Early Childhood Education"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Early Childhood Education Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Social Sciences Sub Domain":"Early Childhood Education"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Early Childhood Education Roles}. I'm eager to Know My Capability Level."
+             },
+
+             # Associate's ,Social Sciences,Human Services Roles
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Social Sciences Sub Domain":"Human Services"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Human Services Roles}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Social Sciences Sub Domain":"Human Services"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Human Services Roles}. I'm eager to Know My Capability Level."
              },
 
 
