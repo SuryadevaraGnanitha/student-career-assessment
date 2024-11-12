@@ -46,21 +46,21 @@ PHASES = {
             "Associate's Degree Domain": {
                 "type": "radio",
                 "label": "Please select your domain",
-                "options": ["Business and Management", "Arts and Humanities", "Information Technology", "Health Sciences", "Social Sciences"],
+                "options": ["Business and Management", "Information Technology"],
                 "showIf": {"education_level": "Associate's Degree"}
             },
 
             "Master's Degree Domain": {
                 "type": "radio",
                 "label": "Please select your domain",
-                "options": ["STEM","law and legal Studies","Business", "STEM", "Health Sciences", "Social Sciences", "Arts and Humanities", "Education"],
+                "options": ["STEM","Business","Engineering"],
                 "showIf": {"education_level": "Master's Degree"}
             },
 
             "PhD Domain": {
                 "type": "radio",
                 "label": "Please select your domain",
-                "options":  ["Natural Sciences", "Engineering", "Social Sciences", "Humanities", "Health Sciences", "Interdisciplinary Studies","Health Sciences", "STEM","Inter disciplinary and Emerging fields"],
+                "options":  ["Engineering", "STEM","Business"],
                 "showIf": {"education_level": "PhD"}
             },
             
@@ -71,34 +71,18 @@ PHASES = {
     "options": ["Accounting", "Business Administration", "Marketing", "Finance", "Hospitality Management"],
     "showIf": {"Associate's Degree Domain": "Business and Management"}
   },
-  "Arts and Humanities Sub Domain": {
-    "type": "radio",
-    "label": "Please select your sub domain",
-    "options": ["Liberal Arts", "Fine Arts", "Graphic Design", "Music", "Theatre"],
-    "showIf": {"Associate's Degree Domain": "Arts and Humanities"}
-  },
+
   "Information Technology Sub Domain": {
     "type": "radio",
     "label": "Please select your sub domain",
     "options": ["Computer Science", "Network Administration", "Web Development", "Cybersecurity", "Database Management"],
     "showIf": {"Associate's Degree Domain": "Information Technology"}
   },
-  "Health Sciences Sub Domain": {
-    "type": "radio",
-    "label": "Please select your sub domain",
-    "options": ["Nursing", "Medical Assisting", "Dental Hygiene", "Radiologic Technology", "Emergency Medical Services"],
-    "showIf": {"Associate's Degree Domain": "Health Sciences"}
-  },
-  "Social Sciences Sub Domain": {
-    "type": "radio",
-    "label": "Please select your sub domain",
-    "options": ["Psychology", "Sociology", "Criminal Justice", "Early Childhood Education", "Human Services"],
-    "showIf": {"Associate's Degree Domain": "Social Sciences"}
-  },
+  
   "Business Master's Sub Domain": {
     "type": "radio",
     "label": "Please select your sub domain",
-    "options": ["Master of Business Administration (MBA)", "Finance", "Marketing", "Human Resource Management", "International Business"],
+    "options": ["Master of Business Administration (MBA)", "Human Resource Management", "International Business"],
     "showIf": {"Master's Degree Domain": "Business"}
   },
   "STEM Master's Sub Domain": {
@@ -107,76 +91,32 @@ PHASES = {
     "options": ["Computer Science", "Data Science", "Engineering", "Mathematics", "Biotechnology"],
     "showIf": {"Master's Degree Domain": "STEM"}
   },
-  "Health Sciences Master's Sub Domain": {
+  "Engineering Master's Sub Domain": {
     "type": "radio",
     "label": "Please select your sub domain",
-    "options": ["Public Health", "Nursing", "Health Administration", "Occupational Therapy", "Physician Assistant Studies"],
-    "showIf": {"Master's Degree Domain": "Health Sciences"}
+    "options": ["Electrical Engineering", "Mechanical Engineering", "Chemical Engineering", "Civil Engineering", "Computer Engineering"],
+    "showIf": {"Master's Degree Domain": "Engineering"}
   },
-  "Social Sciences Master's Sub Domain": {
+  "STEM PhD Sub Domain": {
     "type": "radio",
     "label": "Please select your sub domain",
-    "options": ["Psychology", "Sociology", "Economics", "Political Science", "Anthropology"],
-    "showIf": {"Master's Degree Domain": "Social Sciences"}
+    "options": ["Computer Science", "Data Science", "Engineering", "Mathematics", "Biotechnology"],
+    "showIf": {"PhD Domain": "STEM"}
   },
-  "Arts and Humanities Master's Sub Domain": {
+  "Business PhD Sub Domain": {
     "type": "radio",
     "label": "Please select your sub domain",
-    "options": ["Fine Arts", "Literature", "History", "Philosophy", "Linguistics"],
-    "showIf": {"Master's Degree Domain": "Arts and Humanities"}
+    "options": ["Master of Business Administration (MBA)", "Human Resource Management", "International Business"],
+    "showIf": {"PhD Domain": "Business"}
   },
-  "Education Master's Sub Domain": {
-    "type": "radio",
-    "label": "Please select your sub domain",
-    "options": ["Curriculum and Instruction", "Educational Leadership", "Special Education", "Higher Education Administration", "Educational Technology"],
-    "showIf": {"Master's Degree Domain": "Education"}
-  },
-  "Natural Sciences PhD Sub Domain": {
-    "type": "radio",
-    "label": "Please select your sub domain",
-    "options": ["Physics", "Chemistry", "Biology", "Astronomy", "Environmental Science"],
-    "showIf": {"PhD Domain": "Natural Sciences"}
-  },
+  
+
   "Engineering PhD Sub Domain": {
     "type": "radio",
     "label": "Please select your sub domain",
     "options": ["Electrical Engineering", "Mechanical Engineering", "Chemical Engineering", "Civil Engineering", "Computer Engineering"],
     "showIf": {"PhD Domain": "Engineering"}
   },
-  "Social Sciences PhD Sub Domain": {
-    "type": "radio",
-    "label": "Please select your sub domain",
-    "options": ["Psychology", "Sociology", "Economics", "Political Science", "Anthropology"],
-    "showIf": {"PhD Domain": "Social Sciences"}
-  },
-  "Humanities PhD Sub Domain": {
-    "type": "radio",
-    "label": "Please select your sub domain",
-    "options": ["Literature", "History", "Philosophy", "Linguistics", "Art History"],
-    "showIf": {"PhD Domain": "Humanities"}
-  },
-  "Health Sciences PhD Sub Domain": {
-    "type": "radio",
-    "label": "Please select your sub domain",
-    "options": ["Medicine", "Public Health", "Nursing", "Pharmacology", "Neuroscience"],
-    "showIf": {"PhD Domain": "Health Sciences"}
-  },
-  "Interdisciplinary Studies PhD Sub Domain": {
-    "type": "radio",
-    "label": "Please select your sub domain",
-    "options": ["Bioinformatics", "Cognitive Science", "Environmental Studies", "Nanotechnology", "Digital Humanities"],
-    "showIf": {"PhD Domain": "Interdisciplinary Studies"}
-  },
-
-
-
-            "Inter disciplinary and Emerging fields Sub Domain": {
-                "type": "radio",
-                "label": "Please select your sub domain",
-                "options": ["Neuroscience","Biotechnology"],
-                "showIf": {"PhD Domain": "Inter disciplinary and Emerging fields"}
-            },
-
             "Data Science Sub Domain": {
                 "type": "radio",
                 "label": "Please select your sub domain",
@@ -250,31 +190,12 @@ PHASES = {
                 "showIf": {"Master's Degree Domain": "Health"}
             },
 
-            "STEM-masters Sub Domain": {
-                "type": "radio",
-                "label": "Please select your sub domain",
-                "options": ["Physics","telecommunication","Computer Science"],
-                "showIf": {"Master's Degree Domain": "STEM"}
-            },
-
             "law and legal Sub Domain": {
                 "type": "radio",
                 "label": "Please select your sub domain",
                 "options": ["Crminal law","civil law"],
                 "showIf": {"Master's Degree Domain": "law and legal Studies"}
             },
-            "STEM Sub Domain": {
-                "type": "radio",
-                "label": "Please select your sub domain",
-                "options": ["Physics","telecommunication","Computer Science"],
-                "showIf": {"PhD Domain": "STEM"}
-            },
-            
-        
-
-
-
-
          "Accounting Roles": {
     "type": "radio",
     "label": "Please select your Role",
@@ -305,36 +226,7 @@ PHASES = {
     "options": ["Hotel Manager", "Restaurant Manager", "Event Coordinator", "Tourism Officer", "Customer Service Manager"],
     "showIf": {"Business and Management Sub Domain": "Hospitality Management"}
   },
-  "Liberal Arts Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Writer", "Journalist", "Teacher", "Public Relations Specialist", "Human Resources Coordinator"],
-    "showIf": {"Arts and Humanities Sub Domain": "Liberal Arts"}
-  },
-  "Fine Arts Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Artist", "Art Director", "Curator", "Art Therapist", "Art Teacher"],
-    "showIf": {"Arts and Humanities Sub Domain": "Fine Arts"}
-  },
-  "Graphic Design Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Graphic Designer", "UI/UX Designer", "Art Director", "Creative Director", "Production Artist"],
-    "showIf": {"Arts and Humanities Sub Domain": "Graphic Design"}
-  },
-  "Music Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Musician", "Music Teacher", "Sound Engineer", "Music Therapist", "Music Producer"],
-    "showIf": {"Arts and Humanities Sub Domain": "Music"}
-  },
-  "Theatre Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Actor", "Director", "Stage Manager", "Playwright", "Drama Teacher"],
-    "showIf": {"Arts and Humanities Sub Domain": "Theatre"}
-  },
+  
   "Computer Science Roles": {
     "type": "radio",
     "label": "Please select your Role",
@@ -365,225 +257,87 @@ PHASES = {
     "options": ["Database Administrator", "Data Analyst", "Database Developer", "Data Architect", "Business Intelligence Analyst"],
     "showIf": {"Information Technology Sub Domain": "Database Management"}
   },
-  "Nursing Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Registered Nurse", "Nurse Practitioner", "Clinical Nurse Specialist", "Nurse Educator", "Nurse Manager"],
-    "showIf": {"Health Sciences Sub Domain": "Nursing"}
-  },
-  "Medical Assisting Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Medical Assistant", "Clinical Assistant", "Medical Office Administrator", "EKG Technician", "Phlebotomist"],
-    "showIf": {"Health Sciences Sub Domain": "Medical Assisting"}
-  },
-  "Dental Hygiene Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Dental Hygienist", "Dental Assistant", "Oral Health Educator", "Dental Office Manager", "Dental Sales Representative"],
-    "showIf": {"Health Sciences Sub Domain": "Dental Hygiene"}
-  },
-  "Radiologic Technology Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Radiologic Technologist", "MRI Technologist", "CT Technologist", "Mammography Technologist", "Interventional Radiologist"],
-    "showIf": {"Health Sciences Sub Domain": "Radiologic Technology"}
-  },
-  "Emergency Medical Services Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Emergency Medical Technician (EMT)", "Paramedic", "Emergency Room Technician", "Flight Paramedic", "EMS Educator"],
-    "showIf": {"Health Sciences Sub Domain": "Emergency Medical Services"}
-  },
-  "Psychology Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Clinical Psychologist", "Counseling Psychologist", "School Psychologist", "Industrial-Organizational Psychologist", "Neuropsychologist"],
-    "showIf": {"Social Sciences Sub Domain": "Psychology"}
-  },
-  "Sociology Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Sociologist", "Social Worker", "Market Research Analyst", "Human Resources Specialist", "Community Service Manager"],
-    "showIf": {"Social Sciences Sub Domain": "Sociology"}
-  },
-  "Criminal Justice Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Police Officer", "Probation Officer", "Forensic Scientist", "Criminal Investigator", "Corrections Officer"],
-    "showIf": {"Social Sciences Sub Domain": "Criminal Justice"}
-  },
-  "Early Childhood Education Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Preschool Teacher", "Childcare Center Director", "Special Education Teacher", "Child Life Specialist", "Early Intervention Specialist"],
-    "showIf": {"Social Sciences Sub Domain": "Early Childhood Education"}
-  },
-  "Human Services Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Social Worker", "Case Manager", "Community Outreach Worker", "Mental Health Counselor", "Substance Abuse Counselor"],
-    "showIf": {"Social Sciences Sub Domain": "Human Services"}
-  },
-  "MBA Roles": {
+  
+  "MBA Master's Roles": {
     "type": "radio",
     "label": "Please select your Role",
     "options": ["Business Development Manager", "Management Consultant", "Operations Manager", "Financial Manager", "Marketing Director"],
     "showIf": {"Business Master's Sub Domain": "Master of Business Administration (MBA)"}
   },
-  "Human Resource Management Roles": {
+  "Human Resource Management Master's Roles": {
     "type": "radio",
     "label": "Please select your Role",
     "options": ["HR Manager", "Talent Acquisition Specialist", "Compensation and Benefits Manager", "Training and Development Manager", "Employee Relations Specialist"],
     "showIf": {"Business Master's Sub Domain": "Human Resource Management"}
   },
-  "International Business Roles": {
+  "International Business Master's Roles": {
     "type": "radio",
     "label": "Please select your Role",
     "options": ["International Business Development Manager", "Global Marketing Manager", "International Trade Specialist", "Foreign Market Analyst", "Cross-Cultural Business Consultant"],
     "showIf": {"Business Master's Sub Domain": "International Business"}
   },
-  "Data Science Roles": {
+  "Data Science Master's Roles": {
     "type": "radio",
     "label": "Please select your Role",
     "options": ["Data Scientist", "Machine Learning Engineer", "Business Intelligence Analyst", "Data Architect", "Quantitative Analyst"],
     "showIf": {"STEM Master's Sub Domain": "Data Science"}
   },
-  "Engineering Roles": {
+  "Engineering Master's Roles": {
     "type": "radio",
     "label": "Please select your Role",
     "options": ["Mechanical Engineer", "Electrical Engineer", "Civil Engineer", "Chemical Engineer", "Aerospace Engineer"],
     "showIf": {"STEM Master's Sub Domain": "Engineering"}
   },
-  "Mathematics Roles": {
+  "Mathematics Master's Roles": {
     "type": "radio",
     "label": "Please select your Role",
     "options": ["Mathematician", "Statistician", "Operations Research Analyst", "Actuary", "Cryptographer"],
     "showIf": {"STEM Master's Sub Domain": "Mathematics"}
   },
-  "Biotechnology Roles": {
+  "Biotechnology Master's Roles": {
     "type": "radio",
     "label": "Please select your Role",
     "options": ["Biomedical Engineer", "Biochemist", "Bioinformatics Specialist", "Clinical Research Associate", "Biotechnology Product Developer"],
     "showIf": {"STEM Master's Sub Domain": "Biotechnology"}
   },
-  "Public Health Roles": {
+  "Computer Science Master's Roles": {
     "type": "radio",
     "label": "Please select your Role",
-    "options": ["Epidemiologist", "Health Policy Analyst", "Environmental Health Specialist", "Health Education Specialist", "Biostatistician"],
-    "showIf": {"Health Sciences Master's Sub Domain": "Public Health"}
+    "options": ["Software Developer", "Systems Analyst", "Database Administrator", "IT Consultant", "Artificial Intelligence Specialist"],
+    "showIf": {"STEM Master's Sub Domain": "Computer Science"}
   },
-  "Health Administration Roles": {
+  "Electrical Engineering Master's Roles": {
     "type": "radio",
     "label": "Please select your Role",
-    "options": ["Hospital Administrator", "Healthcare Manager", "Health Information Manager", "Healthcare Consultant", "Medical Practice Manager"],
-    "showIf": {"Health Sciences Master's Sub Domain": "Health Administration"}
+    "options": ["Research Engineer", "Systems Engineer", "Telecommunications Engineer", "Control Systems Engineer", "Robotics Engineer"],
+    "showIf": {"Engineering Master's Sub Domain": "Electrical Engineering"}
   },
-  "Occupational Therapy Roles": {
+  "Mechanical Engineering Master's Roles": {
     "type": "radio",
     "label": "Please select your Role",
-    "options": ["Occupational Therapist", "Ergonomics Consultant", "Rehabilitation Specialist", "Pediatric Occupational Therapist", "Geriatric Occupational Therapist"],
-    "showIf": {"Health Sciences Master's Sub Domain": "Occupational Therapy"}
+    "options": ["Research Engineer", "Aerospace Engineer", "Robotics Engineer", "Automotive Engineer", "Biomedical Engineer"],
+    "showIf": {"Engineering Master's Sub Domain": "Mechanical Engineering"}
   },
-  "Physician Assistant Studies Roles": {
+  "Chemical Engineering Master's Roles": {
     "type": "radio",
     "label": "Please select your Role",
-    "options": ["Physician Assistant", "Surgical Physician Assistant", "Emergency Medicine Physician Assistant", "Family Medicine Physician Assistant", "Specialty Physician Assistant"],
-    "showIf": {"Health Sciences Master's Sub Domain": "Physician Assistant Studies"}
+    "options": ["Process Engineer", "Biochemical Engineer", "Materials Scientist", "Nanotechnology Engineer", "Environmental Engineer"],
+    "showIf": {"Engineering Master's Sub Domain": "Chemical Engineering"}
   },
-  "Economics Roles": {
+  "Civil Engineering Master's Roles": {
     "type": "radio",
     "label": "Please select your Role",
-    "options": ["Economist", "Economic Analyst", "Financial Economist", "Policy Analyst", "Market Research Analyst"],
-    "showIf": {"Social Sciences Master's Sub Domain": "Economics"}
+    "options": ["Structural Engineer", "Geotechnical Engineer", "Transportation Engineer", "Environmental Engineer", "Water Resources Engineer"],
+    "showIf": {"Engineering Master's Sub Domain": "Civil Engineering"}
   },
-  "Political Science Roles": {
+  "Computer Engineering Master's Roles": {
     "type": "radio",
     "label": "Please select your Role",
-    "options": ["Political Analyst", "Policy Advisor", "Campaign Manager", "Lobbyist", "Diplomat"],
-    "showIf": {"Social Sciences Master's Sub Domain": "Political Science"}
+    "options": ["Computer Architect", "Embedded Systems Engineer", "VLSI Designer", "Network Engineer", "Cybersecurity Researcher"],
+    "showIf": {"Engineering Master's Sub Domain": "Computer Engineering"}
   },
-  "Anthropology Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Anthropologist", "Archaeologist", "Cultural Resource Manager", "Museum Curator", "Corporate Anthropologist"],
-    "showIf": {"Social Sciences Master's Sub Domain": "Anthropology"}
-  },
-  "Literature Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Literary Critic", "Editor", "Technical Writer", "Copywriter", "Librarian"],
-    "showIf": {"Arts and Humanities Master's Sub Domain": "Literature"}
-  },
-  "Linguistics Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Linguist", "Translator", "Interpreter", "Computational Linguist", "Speech-Language Pathologist"],
-    "showIf": {"Arts and Humanities Master's Sub Domain": "Linguistics"}
-  },
-  "Curriculum and Instruction Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Curriculum Developer", "Instructional Coordinator", "Educational Consultant", "Training and Development Specialist", "E-Learning Designer"],
-    "showIf": {"Education Master's Sub Domain": "Curriculum and Instruction"}
-  },
-  "Educational Leadership Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["School Principal", "Superintendent", "Dean of Students", "Education Policy Analyst", "Education Program Director"],
-    "showIf": {"Education Master's Sub Domain": "Educational Leadership"}
-  },
-  "Special Education Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Special Education Teacher", "Inclusion Specialist", "Behavior Intervention Specialist", "Special Education Coordinator", "Assistive Technology Specialist"],
-    "showIf": {"Education Master's Sub Domain": "Special Education"}
-  },
-  "Higher Education Administration Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["College Administrator", "Academic Advisor", "Admissions Director", "Student Affairs Coordinator", "University Registrar"],
-    "showIf": {"Education Master's Sub Domain": "Higher Education Administration"}
-  },
-  "Educational Technology Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Instructional Technologist", "E-Learning Developer", "Educational Software Designer", "Technology Integration Specialist", "Digital Learning Coordinator"],
-    "showIf": {"Education Master's Sub Domain": "Educational Technology"}
-  },
-  "Physics PhD Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Research Physicist", "Quantum Physicist", "Astrophysicist", "Medical Physicist", "Condensed Matter Physicist"],
-    "showIf": {"Natural Sciences PhD Sub Domain": "Physics"}
-  },
-
-
- "Chemistry PhD Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Research Chemist", "Analytical Chemist", "Organic Chemist", "Pharmaceutical",  "Chemist", "Biochemist", "Materials Scientist"],
-    "showIf": {"Natural Sciences PhD Sub Domain": "Chemistry"}
-  },
-
-  "Biology PhD Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Molecular Biologist", "Geneticist", "Ecologist", "Microbiologist", "Neuroscientist"],
-    "showIf": {"Natural Sciences PhD Sub Domain": "Biology"}
-  },
-  "Astronomy PhD Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Astronomer", "Cosmologist", "Planetary Scientist", "Radio Astronomer", "Astrobiologist"],
-    "showIf": {"Natural Sciences PhD Sub Domain": "Astronomy"}
-  },
-  "Environmental Science PhD Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Environmental Scientist", "Climate Change Analyst", "Ecologist", "Geoscientist", "Conservation Scientist"],
-    "showIf": {"Natural Sciences PhD Sub Domain": "Environmental Science"}
-  },
+  
+  
   "Electrical Engineering PhD Roles": {
     "type": "radio",
     "label": "Please select your Role",
@@ -614,95 +368,53 @@ PHASES = {
     "options": ["Computer Architect", "Embedded Systems Engineer", "VLSI Designer", "Network Engineer", "Cybersecurity Researcher"],
     "showIf": {"Engineering PhD Sub Domain": "Computer Engineering"}
   },
-  "Humanities PhD Literature Roles": {
+  "Data Science phD Roles": {
     "type": "radio",
     "label": "Please select your Role",
-    "options": ["Literary Scholar", "Comparative Literature Researcher", "Literature Professor", "Literary Critic", "Textual Editor"],
-    "showIf": {"Humanities PhD Sub Domain": "Literature"}
+    "options": ["Data Scientist", "Machine Learning Engineer", "Business Intelligence Analyst", "Data Architect", "Quantitative Analyst"],
+    "showIf": {"STEM PhD Sub Domain": "Data Science"}
   },
-  "Humanities PhD History Roles": {
+  "Engineering phD Roles": {
     "type": "radio",
     "label": "Please select your Role",
-    "options": ["Historical Researcher", "Archivist", "Museum Curator", "History Professor", "Historical Consultant"],
-    "showIf": {"Humanities PhD Sub Domain": "History"}
+    "options": ["Mechanical Engineer", "Electrical Engineer", "Civil Engineer", "Chemical Engineer", "Aerospace Engineer"],
+    "showIf": {"STEM PhD Sub Domain": "Engineering"}
   },
-  "Humanities PhD Philosophy Roles": {
+  "Mathematics phD Roles": {
     "type": "radio",
     "label": "Please select your Role",
-    "options": ["Philosophy Professor", "Ethics Consultant", "Logic Researcher", "Philosophical Writer", "Bioethicist"],
-    "showIf": {"Humanities PhD Sub Domain": "Philosophy"}
+    "options": ["Mathematician", "Statistician", "Operations Research Analyst", "Actuary", "Cryptographer"],
+    "showIf": {"STEM PhD Sub Domain": "Mathematics"}
   },
-  "Humanities PhD Linguistics Roles": {
+  "Biotechnology phD Roles": {
     "type": "radio",
     "label": "Please select your Role",
-    "options": ["Linguistics Researcher", "Computational Linguist", "Phonetician", "Sociolinguist", "Language Acquisition Specialist"],
-    "showIf": {"Humanities PhD Sub Domain": "Linguistics"}
+    "options": ["Biomedical Engineer", "Biochemist", "Bioinformatics Specialist", "Clinical Research Associate", "Biotechnology Product Developer"],
+    "showIf": {"STEM PhD Sub Domain": "Biotechnology"}
   },
-  "Humanities PhD Art History Roles": {
+  "Computer Science phD Roles": {
     "type": "radio",
     "label": "Please select your Role",
-    "options": ["Art Historian", "Museum Curator", "Art Conservator", "Art Critic", "Cultural Heritage Specialist"],
-    "showIf": {"Humanities PhD Sub Domain": "Art History"}
+    "options": ["Software Developer", "Systems Analyst", "Database Administrator", "IT Consultant", "Artificial Intelligence Specialist"],
+    "showIf": {"STEM PhD Sub Domain": "Computer Science"}
   },
-  "Medicine PhD Roles": {
+  "MBA phD Roles": {
     "type": "radio",
     "label": "Please select your Role",
-    "options": ["Medical Researcher", "Clinical Scientist", "Biomedical Scientist", "Pharmacologist", "Medical Geneticist"],
-    "showIf": {"Health Sciences PhD Sub Domain": "Medicine"}
+    "options": ["Business Development Manager", "Management Consultant", "Operations Manager", "Financial Manager", "Marketing Director"],
+    "showIf": {"Business PhD Sub Domain": "Master of Business Administration (MBA)"}
   },
-  "Pharmacology PhD Roles": {
+  "Human Resource Management phD Roles": {
     "type": "radio",
     "label": "Please select your Role",
-    "options": ["Pharmacologist", "Drug Developer", "Toxicologist", "Clinical Research Scientist", "Pharmaceutical Consultant"],
-    "showIf": {"Health Sciences PhD Sub Domain": "Pharmacology"}
+    "options": ["HR Manager", "Talent Acquisition Specialist", "Compensation and Benefits Manager", "Training and Development Manager", "Employee Relations Specialist"],
+    "showIf": {"Business PhD Sub Domain": "Human Resource Management"}
   },
-  "Neuroscience PhD Roles": {
+  "International Business phD Roles": {
     "type": "radio",
     "label": "Please select your Role",
-    "options": ["Neuroscientist", "Cognitive Scientist", "Neurobiologist", "Neuroengineering Researcher", "Brain-Computer Interface Specialist"],
-    "showIf": {"Health Sciences PhD Sub Domain": "Neuroscience"}
-  },
-  "Bioinformatics PhD Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Bioinformatician", "Computational Biologist", "Genomics Data Analyst", "Systems Biologist", "Biostatistician"],
-    "showIf": {"Interdisciplinary Studies PhD Sub Domain": "Bioinformatics"}
-  },
-  "Cognitive Science PhD Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Cognitive Scientist", "Artificial Intelligence Researcher", "Human-Computer Interaction Specialist", "Neurolinguist", "Cognitive Psychologist"],
-    "showIf": {"Interdisciplinary Studies PhD Sub Domain": "Cognitive Science"}
-  },
-  "Environmental Studies PhD Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Environmental Policy Analyst", "Sustainability Consultant", "Ecosystem Manager", "Climate Change Researcher", "Environmental Education Specialist"],
-    "showIf": {"Interdisciplinary Studies PhD Sub Domain": "Environmental Studies"}
-  },
-  "Nanotechnology PhD Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Nanotechnology Researcher", "Nanomaterials Scientist", "Nanoelectronics Engineer", "Nanomedicine Specialist", "Nanofabrication Engineer"],
-    "showIf": {"Interdisciplinary Studies PhD Sub Domain": "Nanotechnology"}
-  },
-  "Digital Humanities PhD Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Digital Archivist", "Data Visualization Specialist", "Cultural Analytics Researcher", "Digital Curator", "Humanities Computing Specialist"],
-    "showIf": {"Interdisciplinary Studies PhD Sub Domain": "Digital Humanities"}
-  },
-  "Neuroscience Interdisciplinary PhD Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Neuroscience Researcher", "Brain-Computer Interface Developer", "Neuroimaging Specialist", "Computational Neuroscientist", "Neuroethicist"],
-    "showIf": {"Inter disciplinary and Emerging fields Sub Domain": "Neuroscience"}
-  },
-  "Biotechnology Interdisciplinary PhD Roles": {
-    "type": "radio",
-    "label": "Please select your Role",
-    "options": ["Biotechnologist", "Genetic Engineer", "Bioproduct Developer", "Bioprocess Engineer", "Synthetic Biologist"],
-    "showIf": {"Inter disciplinary and Emerging fields Sub Domain": "Biotechnology"}
+    "options": ["International Business Development Manager", "Global Marketing Manager", "International Trade Specialist", "Foreign Market Analyst", "Cross-Cultural Business Consultant"],
+    "showIf": {"Business PhD Sub Domain": "International Business"}
   },
   "Machine Learning Roles": {
     "type": "radio",
@@ -1066,7 +778,7 @@ PHASES = {
   },
   "Learning Mode": {
                 "type": "radio",
-                "label": "Please select your Role",
+                "label": "Please select your Learning Mode",
                 "options": ["Online","Offline"],
             },
     "Skills":{
@@ -1094,11 +806,6 @@ PHASES = {
     "label": "How would you rate your proficiency level in your chosen subdomain?",
     "options": ["Beginner", "Intermediate", "Advanced", "Expert"]
   },
-#   "Certifications": {
-#     "type": "multiselect",
-#     "label": "Do you hold any relevant certifications? (Select all that apply)",
-#     "options": ["Professional certification", "Academic certification", "Industry-specific certification", "Vendor-specific certification", "None"]
-#   },
   "Preferred Work Environment": {
     "type": "radio",
     "label": "What type of work environment do you prefer?",
@@ -1108,10 +815,6 @@ PHASES = {
     "type": "multiselect",
     "label": "What types of projects have you worked on? (Select all that apply)",
     "options": ["Small-scale projects", "Large enterprise projects", "Research projects", "Open-source contributions", "Personal projects", "Cross-functional team projects"]
-  },
-  "Technical Skills": {
-    "type": "text_area",
-    "label": "List your top 5 technical skills relevant to your chosen subdomain:"
   },
   "Soft Skills": {
     "type": "multiselect",
@@ -1167,229 +870,231 @@ PHASES = {
          "user_prompt": [
              
              #bachelor's,data science, Machine Learning Roles
-            {
-                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Data Science Sub Domain":"Machine Learning"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Machine Learning Roles}. I'm eager to Know My Capability Level."
-             },
-
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Data Science Sub Domain":"Machine Learning"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Machine Learning Roles}. I'm eager to Know My Capability Level."
-             },
+                 "prompt": "I am {name}, I recently completed my {education_level} in Onfline mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Machine Learning Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+                 },
+
+             #bachelor's,data science, Machine Learning Roles
+            {
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Data Science Sub Domain":"Machine Learning"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Machine Learning Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+                 },
+
+             
 
              #bachelor's,data science, Statistical Analysis Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Data Science Sub Domain":"Statistical Analysis"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Statistical Analysis Roles}. I'm eager to Know My Capability Level."
-             },
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Statistical Analysis Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Data Science Sub Domain":"Statistical Analysis"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Statistical Analysis Roles}. I'm eager to Know My Capability Level."
-             },
+                 "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Statistical Analysis Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
              # bachelor's, datascience, Data Visualization Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Data Science Sub Domain":"Data Visualization"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Data Visualization Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Data Visualization Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Data Science Sub Domain":"Data Visualization"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Data Visualization Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Data Visualization Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
              # bachelor's, datascience, Big Data Analytics Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Data Science Sub Domain":"Big Data Analytics"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Big Data Analytics Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Big Data Analytics Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Data Science Sub Domain":"Big Data Analytics"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Big Data Analytics Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Big Data Analytics Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
              # bachelor's, datascience, Predictive Modeling Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Data Science Sub Domain":"Predictive Modeling"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Predictive Modeling Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Predictive Modeling Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Data Science Sub Domain":"Predictive Modeling"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Predictive Modeling Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Predictive Modeling Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
              # bachelor's, datascience,Natural Language Processing Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Data Science Sub Domain":"Natural Language Processing"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Natural Language Processing Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Natural Language Processing Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Data Science Sub Domain":"Natural Language Processing"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Natural Language Processing Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Natural Language Processing Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
              # bachelor's , AIML, deep LEARNING roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"AIML Sub Domain":"Deep Learning"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Deep Learning Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Deep Learning Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"AIML Sub Domain":"Deep Learning"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Deep Learning Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Deep Learning Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
              # bachelor's , AIML, computer vision roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"AIML Sub Domain":"Computer Vision"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Computer Vision Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Computer Vision Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
              {
-                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"AIML Sub Domain":"Deep Learning"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Computer Vision Roles}. I'm eager to Know My Capability Level."
-             },
+                "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"AIML Sub Domain":"Computer Vision"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Computer Vision Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
              # bachelor's , AIML, Reinforcement Learning roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"AIML Sub Domain":"Reinforcement Learning"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Reinforcement Learning Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Reinforcement Learning Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"AIML Sub Domain":"Reinforcement Learning"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Reinforcement Learning Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Reinforcement Learning Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
              # bachelor's , AIML, Neural Networks roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"AIML Sub Domain":"Neural Networks"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Neural Networks Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Neural Networks Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"AIML Sub Domain":"Neural Networks"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Neural Networks Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Neural Networks Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
              # bachelor's , AIML, Expert Systems roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"AIML Sub Domain":"Expert Systems"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Expert Systems Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Expert Systems Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"AIML Sub Domain":"Expert Systems"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Expert Systems Roles}. I'm eager to Know My Capability Level."
-             },
-
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Expert Systems Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
              # bachelor's , AIML, Genetic Algorithms roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"AIML Sub Domain":"Genetic Algorithms"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Genetic Algorithms Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Genetic Algorithms Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"AIML Sub Domain":"Genetic Algorithms"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Genetic Algorithms Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Genetic Algorithms Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
              # bachelor's , IOT, Embedded Systems roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"IOT Sub Domain":"Embedded Systems"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Embedded Systems Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Embedded Systems Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"IOT Sub Domain":"Embedded Systems"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Embedded Systems Roles}. I'm eager to Know My Capability Level."
+                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Embedded Systems Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              # bachelor's , IOT, Sensor Networks Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"IOT Sub Domain":"Sensor Networks"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Sensor Networks Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Sensor Networks Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"IOT Sub Domain":"Sensor Networks"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Sensor Networks Roles}. I'm eager to Know My Capability Level."
+                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Sensor Networks Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              # bachelor's , IOT, Edge Computing Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"IOT Sub Domain":"Edge Computing"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Edge Computing Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Edge Computing Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"IOT Sub Domain":"Edge Computing"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Edge Computing Roles}. I'm eager to Know My Capability Level."
+                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Edge Computing Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              # bachelor's , IOT, IoT Security Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"IOT Sub Domain":"IoT Security"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {IoT Security Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {IoT Security Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"IOT Sub Domain":"IoT Security"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {IoT Security Roles}. I'm eager to Know My Capability Level."
+                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {IoT Security Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              # bachelor's , IOT, Sensor Networks Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"IOT Sub Domain":"Sensor Networks"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Sensor Networks Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Sensor Networks Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"IOT Sub Domain":"Sensor Networks"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Sensor Networks Roles}. I'm eager to Know My Capability Level."
+                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Sensor Networks Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's , IOT, IoT Protocols Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"IOT Sub Domain":"IoT Protocols"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {IoT Protocols Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {IoT Protocols Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"IOT Sub Domain":"IoT Protocols"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {IoT Protocols Roles}. I'm eager to Know My Capability Level."
+                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {IoT Protocols Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              # bachelor's , IOT, Smart Home/City Technologies Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"IOT Sub Domain":"Smart Home/City Technologies"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Smart Home/City Technologies Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Smart Home/City Technologies Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"IOT Sub Domain":"Smart Home/City Technologies"}]},
-                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Smart Home/City Technologies Roles}. I'm eager to Know My Capability Level."
+                 "prompt": "I am {name}, I recently completed my {education_level}  in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Smart Home/City Technologies Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              
@@ -1398,463 +1103,463 @@ PHASES = {
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cyber Security Sub Domain":"Network Security"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Network Security Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Network Security Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cyber Security Sub Domain":"Network Security"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Network Security Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Network Security Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Cyber Security , Application Security Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cyber Security Sub Domain":"Application Security"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Application Security Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Application Security Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cyber Security Sub Domain":"Application Security"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Application Security Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Application Security Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Cyber Security ,Information Security Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cyber Security Sub Domain":"Information Security"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Information Security Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Information Security Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cyber Security Sub Domain":"Information Security"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Information Security Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Information Security Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Cyber Security ,Cryptography Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cyber Security Sub Domain":"Cryptography"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Cryptography Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Cryptography Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cyber Security Sub Domain":"Cryptography"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Cryptography Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Cryptography Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Cyber Security ,Ethical Hacking Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cyber Security Sub Domain":"Ethical Hacking"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Ethical Hacking Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Ethical Hacking Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cyber Security Sub Domain":"Ethical Hacking"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Ethical Hacking Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Ethical Hacking Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Cyber Security ,Incident Response and Forensics Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cyber Security Sub Domain":"Incident Response and Forensics"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Incident Response and Forensics Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Incident Response and Forensics Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cyber Security Sub Domain":"Incident Response and Forensics"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Incident Response and Forensics Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Incident Response and Forensics Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Cloud Computing ,Infrastructure as a Service (IaaS) Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cloud Computing Sub Domain":"Infrastructure as a Service (IaaS)"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Infrastructure as a Service (IaaS) Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Infrastructure as a Service (IaaS) Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cloud Computing Sub Domain":"Infrastructure as a Service (IaaS)"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Infrastructure as a Service (IaaS) Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Infrastructure as a Service (IaaS) Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Cloud Computing ,Platform as a Service (PaaS) Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cloud Computing Sub Domain":"Platform as a Service (PaaS)"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Platform as a Service (PaaS) Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Platform as a Service (PaaS) Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cloud Computing Sub Domain":"Platform as a Service (PaaS)"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Platform as a Service (PaaS) Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Platform as a Service (PaaS) Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Cloud Computing ,Software as a Service (SaaS) Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cloud Computing Sub Domain":"Software as a Service (SaaS)"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Software as a Service (SaaS) Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Software as a Service (SaaS) Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cloud Computing Sub Domain":"Software as a Service (SaaS)"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Software as a Service (SaaS) Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Software as a Service (SaaS) Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Cloud Computing ,Cloud Architecture Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cloud Computing Sub Domain":"Cloud Architecture"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Cloud Architecture Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Cloud Architecture Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cloud Computing Sub Domain":"Cloud Architecture"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Cloud Architecture Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Cloud Architecture Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Cloud Computing ,Serverless Computing Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cloud Computing Sub Domain":"Serverless Computing"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Serverless Computing Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Serverless Computing Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cloud Computing Sub Domain":"Serverless Computing"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Serverless Computing Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Serverless Computing Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Cloud Computing ,Multi-cloud and Hybrid Cloud Solutions Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Cloud Computing Sub Domain":"Multi-cloud and Hybrid Cloud Solutions"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Multi-cloud and Hybrid Cloud Solutions Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Multi-cloud and Hybrid Cloud Solutions Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Cloud Computing Sub Domain":"Multi-cloud and Hybrid Cloud Solutions"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Multi-cloud and Hybrid Cloud Solutions Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Multi-cloud and Hybrid Cloud Solutions Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Full Stack Development,Front-end Development Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Full Stack Development Sub Domain":"Front-end Development"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Front-end Development Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Front-end Development Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Full Stack Development Sub Domain":"Front-end Development"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Front-end Development Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Front-end Development Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Full Stack Development,Back-end Development Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Full Stack Development Sub Domain":"Back-end Development"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Back-end Development Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Back-end Development Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Full Stack Development Sub Domain":"Back-end Development"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Back-end Development Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Back-end Development Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Full Stack Development,Database Management Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Full Stack Development Sub Domain":"Database Management"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Database Management Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Database Management Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Full Stack Development Sub Domain":"Database Management"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Database Management Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Database Management Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Full Stack Development,API Development Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Full Stack Development Sub Domain":"API Development"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {API Development Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {API Development Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Full Stack Development Sub Domain":"API Development"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {API Development Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {API Development Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Full Stack Development,Web Security Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Full Stack Development Sub Domain":"Web Security"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Web Security Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Web Security Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Full Stack Development Sub Domain":"Web Security"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Web Security Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Web Security Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
-             # bachelor's ,Full Stack Development,User Experience (UX) Design Roles
+            # bachelor's ,Full Stack Development,User Experience (UX) Design Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Full Stack Development Sub Domain":"User Experience (UX) Design"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {User Experience (UX) Design Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {User Experience (UX) Design Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Full Stack Development Sub Domain":"User Experience (UX) Design"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {User Experience (UX) Design Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {User Experience (UX) Design Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,DevOps,Continuous Integration/Continuous Deployment (CI/CD) Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"DevOps Sub Domain":"Continuous Integration/Continuous Deployment (CI/CD)"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Continuous Integration/Continuous Deployment (CI/CD) Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Continuous Integration/Continuous Deployment (CI/CD) Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"DevOps Sub Domain":"Continuous Integration/Continuous Deployment (CI/CD)"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Continuous Integration/Continuous Deployment (CI/CD) Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Continuous Integration/Continuous Deployment (CI/CD) Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,DevOps,Infrastructure as Code Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"DevOps Sub Domain":"Infrastructure as Code"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Infrastructure as Code Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Infrastructure as Code Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"DevOps Sub Domain":"Infrastructure as Code"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Infrastructure as Code Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Infrastructure as Code Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,DevOps,Configuration Management Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"DevOps Sub Domain":"Configuration Management"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Configuration Management Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Configuration Management Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"DevOps Sub Domain":"Configuration Management"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Configuration Management Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Configuration Management Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,DevOps,Containerization Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"DevOps Sub Domain":"Containerization"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Containerization Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Containerization Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"DevOps Sub Domain":"Containerization"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Containerization Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Containerization Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,DevOps,Orchestration Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"DevOps Sub Domain":"Orchestration"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Orchestration Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Orchestration Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"DevOps Sub Domain":"Orchestration"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Orchestration Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Orchestration Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,DevOps,Monitoring and Logging Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"DevOps Sub Domain":"Monitoring and Logging"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Monitoring and Logging Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Monitoring and Logging Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"DevOps Sub Domain":"Monitoring and Logging"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Monitoring and Logging Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Monitoring and Logging Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Blockchain,Distributed Ledger Technology Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Blockchain Sub Domain":"Distributed Ledger Technology"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Distributed Ledger Technology Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Distributed Ledger Technology Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Blockchain Sub Domain":"Distributed Ledger Technology"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Distributed Ledger Technology Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Distributed Ledger Technology Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Blockchain,Smart Contracts Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Blockchain Sub Domain":"Smart Contracts"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Smart Contracts Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Smart Contracts Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Blockchain Sub Domain":"Smart Contracts"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Smart Contracts Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Smart Contracts Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Blockchain,Cryptocurrency Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Blockchain Sub Domain":"Cryptocurrency"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Cryptocurrency Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Cryptocurrency Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Blockchain Sub Domain":"Cryptocurrency"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Cryptocurrency Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Cryptocurrency Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Blockchain,Decentralized Finance (DeFi) Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Blockchain Sub Domain":"Decentralized Finance (DeFi)"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Decentralized Finance (DeFi) Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Decentralized Finance (DeFi) Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Blockchain Sub Domain":"Decentralized Finance (DeFi)"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Decentralized Finance (DeFi) Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Decentralized Finance (DeFi) Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Blockchain,Consensus Mechanisms Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Blockchain Sub Domain":"Consensus Mechanisms"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Consensus Mechanisms Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Consensus Mechanisms Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Blockchain Sub Domain":"Consensus Mechanisms"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Consensus Mechanisms Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Consensus Mechanisms Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Blockchain,Blockchain Security Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Blockchain Sub Domain":"Blockchain Security"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Blockchain Security Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Blockchain Security Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Blockchain Sub Domain":"Blockchain Security"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Blockchain Security Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Blockchain Security Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Quantum Computing,Quantum Algorithms Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Quantum Computing Sub Domain":"Quantum Algorithms"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Algorithms Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Algorithms Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Quantum Computing Sub Domain":"Quantum Algorithms"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Algorithms Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Algorithms Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Quantum Computing,Quantum Error Correction Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Quantum Computing Sub Domain":"Quantum Error Correction"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Error Correction Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Error Correction Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Quantum Computing Sub Domain":"Quantum Error Correction"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Error Correction Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Error Correction Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Quantum Computing,Quantum Cryptography Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Quantum Computing Sub Domain":"Quantum Cryptography"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Cryptography Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Cryptography Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Quantum Computing Sub Domain":"Quantum Cryptography"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Cryptography Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Cryptography Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Quantum Computing,Quantum Simulation Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Quantum Computing Sub Domain":"Quantum Simulation"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Simulation Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Simulation Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Quantum Computing Sub Domain":"Quantum Simulation"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Simulation Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Simulation Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Quantum Computing,Quantum Hardware Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Quantum Computing Sub Domain":"Quantum Hardware"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Hardware Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Hardware Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Quantum Computing Sub Domain":"Quantum Hardware"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Hardware Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Hardware Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Quantum Computing,Quantum Software Development Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Quantum Computing Sub Domain":"Quantum Software Development"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Software Development Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Software Development Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Quantum Computing Sub Domain":"Quantum Software Development"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Software Development Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Quantum Software Development Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Robotics,Robot Design and Kinematics Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Robotics Sub Domain":"Robot Design and Kinematics"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Robot Design and Kinematics Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Robot Design and Kinematics Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Robotics Sub Domain":"Robot Design and Kinematics"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Robot Design and Kinematics Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Robot Design and Kinematics Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Robotics,Computer Vision for Robotics Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Robotics Sub Domain":"Computer Vision for Robotics"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Computer Vision for Robotics Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Computer Vision for Robotics Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Robotics Sub Domain":"Computer Vision for Robotics"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Computer Vision for Robotics Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Computer Vision for Robotics Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Robotics,Robot Operating System (ROS) Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Robotics Sub Domain":"Robot Operating System (ROS)"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Robot Operating System (ROS) Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Robot Operating System (ROS) Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Robotics Sub Domain":"Robot Operating System (ROS)"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Robot Operating System (ROS) Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Robot Operating System (ROS) Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Robotics,Human-Robot Interaction Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Robotics Sub Domain":"Human-Robot Interaction"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Human-Robot Interaction Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Human-Robot Interaction Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Robotics Sub Domain":"Human-Robot Interaction"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Human-Robot Interaction Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Human-Robot Interaction Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Robotics,Autonomous Navigation Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Robotics Sub Domain":"Autonomous Navigation"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Autonomous Navigation Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Autonomous Navigation Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Robotics Sub Domain":"Autonomous Navigation"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Autonomous Navigation Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Autonomous Navigation Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
              # bachelor's ,Robotics,Soft Robotics Roles
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Offline"},{"Robotics Sub Domain":"Soft Robotics"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Soft Robotics Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Soft Robotics Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Bachelor's Degree"},{"Learning Mode": "Online"},{"Robotics Sub Domain":"Soft Robotics"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Soft Robotics Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Bachelor's Degree Domain} and having a goal to become {Soft Robotics Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
 
@@ -1862,376 +1567,414 @@ PHASES = {
 
              {
                 "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Business and Management Sub Domain":"Accounting"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Accounting Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Accounting Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
              {
                 "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Business and Management Sub Domain":"Accounting"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Accounting Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Accounting Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
+
              # Associate's ,Business and Management,Business Administration Roles
 
              {
                 "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Business and Management Sub Domain":"Business Administration"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Business Administration Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Business Administration Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
+
 
              {
                 "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Business and Management Sub Domain":"Business Administration"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Business Administration Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Business Administration Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
+
 
              # Associate's ,Business and Management,Marketing Roles
 
              {
                 "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Business and Management Sub Domain":"Marketing"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Marketing Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Marketing Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
+
 
              {
                 "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Business and Management Sub Domain":"Marketing"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Marketing Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Marketing Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
+
 
              # Associate's ,Business and Management,Finance Roles
 
              {
                 "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Business and Management Sub Domain":"Finance"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Finance Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Finance Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
+
 
              {
                 "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Business and Management Sub Domain":"Finance"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Finance Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Finance Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
+
 
              # Associate's ,Business and Management,Hospitality Management Roles
 
              {
                 "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Business and Management Sub Domain":"Hospitality Management"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Hospitality Management Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Hospitality Management Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
+
 
              {
                 "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Business and Management Sub Domain":"Hospitality Management"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Hospitality Management Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Hospitality Management Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
 
-             # Associate's ,Arts and Humanities,Liberal Arts Roles
 
-             {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Arts and Humanities Sub Domain":"Liberal Arts"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Liberal Arts Roles}. I'm eager to Know My Capability Level."
-             },
-
-             {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Arts and Humanities Sub Domain":"Liberal Arts"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Liberal Arts Roles}. I'm eager to Know My Capability Level."
-             },
-
-             # Associate's ,Arts and Humanities,Fine Arts Roles
-
-             {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Arts and Humanities Sub Domain":"Fine Arts"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Fine Arts Roles}. I'm eager to Know My Capability Level."
-             },
-
-             {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Arts and Humanities Sub Domain":"Fine Arts"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Fine Arts Roles}. I'm eager to Know My Capability Level."
-             },
-
-             # Associate's ,Arts and Humanities,Graphic Design Roles
-
-             {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Arts and Humanities Sub Domain":"Graphic Design"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Graphic Design Roles}. I'm eager to Know My Capability Level."
-             },
-
-             {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Arts and Humanities Sub Domain":"Graphic Design"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Graphic Design Roles}. I'm eager to Know My Capability Level."
-             },
-
-             # Associate's ,Arts and Humanities,Music Roles
-
-             {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Arts and Humanities Sub Domain":"Music"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Music Roles}. I'm eager to Know My Capability Level."
-             },
-
-             {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Arts and Humanities Sub Domain":"Music"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Music Roles}. I'm eager to Know My Capability Level."
-             },
-
-             # Associate's ,Arts and Humanities,Theatre Roles
-
-             {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Arts and Humanities Sub Domain":"Theatre"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Theatre Roles}. I'm eager to Know My Capability Level."
-             },
-
-             {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Arts and Humanities Sub Domain":"Theatre"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Theatre+ Roles}. I'm eager to Know My Capability Level."
-             },
 
              # Associate's ,Information Technology,Computer Science Roles
 
              {
                 "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Information Technology Sub Domain":"Computer Science"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Computer Science Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Computer Science Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
+
 
              {
                 "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Information Technology Sub Domain":"Computer Science"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Computer Science Roles}. I'm eager to Know My Capability Level."
-             },
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with an academic percentage of {Academic Performance}% and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Computer Science Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to know my capability level."
+},
+
 
              # Associate's ,Information Technology,Network Administration Roles
 
              {
                 "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Information Technology Sub Domain":"Network Administration"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Network Administration Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Network Administration Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Information Technology Sub Domain":"Network Administration"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Network Administration Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Network Administration Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              # Associate's ,Information Technology,Web Development Roles
 
              {
                 "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Information Technology Sub Domain":"Web Development"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Web Development Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Web Development Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience},  My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Information Technology Sub Domain":"Web Development"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Web Development Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Web Development Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              # Associate's ,Information Technology,Cybersecurity Roles
 
              {
                 "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Information Technology Sub Domain":"Cybersecurity"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Cybersecurity Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Cybersecurity Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Information Technology Sub Domain":"Cybersecurity"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Cybersecurity Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Cybersecurity Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              # Associate's ,Information Technology,Database Management Roles
 
              {
                 "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Information Technology Sub Domain":"Database Management"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Database Management Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Database Management Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
                 "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Information Technology Sub Domain":"Database Management"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Database Management Roles}. I'm eager to Know My Capability Level."
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Database Management Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
-             # Associate's ,Health Sciences,Nursing Roles
+             
 
+             # masters , STEM,Computer Science roles
              {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Health Sciences Sub Domain":"Nursing"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Nursing Roles}. I'm eager to Know My Capability Level."
-             },
-
-             {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Health Sciences Sub Domain":"Nursing"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Nursing Roles}. I'm eager to Know My Capability Level."
-             },
-
-             # Associate's ,Health Sciences,Medical Assisting Roles
-
-             {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Health Sciences Sub Domain":"Medical Assisting"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Medical Assisting Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Offline"},{"STEM Master's Sub Domain":"Computer Science"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Computer Science Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Health Sciences Sub Domain":"Medical Assisting"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Medical Assisting Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Online"},{"STEM Master's Sub Domain":"Computer Science"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Computer Science Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
-             # Associate's ,Health Sciences,Dental Hygiene Roles
-
+             # masters , STEM,Data Science roles
              {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Health Sciences Sub Domain":"Dental Hygiene"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Dental Hygiene Roles}. I'm eager to Know My Capability Level."
-             },
-
-             {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Health Sciences Sub Domain":"Dental Hygiene"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Dental Hygiene Roles}. I'm eager to Know My Capability Level."
-             },
-
-             # Associate's ,Health Sciences,Radiologic Technology Roles
-
-             {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Health Sciences Sub Domain":"Radiologic Technology"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Radiologic Technology Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Offline"},{"STEM Master's Sub Domain":"Data Science"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Data Science Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Health Sciences Sub Domain":"Radiologic Technology"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Radiologic Technology Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Online"},{"STEM Master's Sub Domain":"Data Science"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Data Science Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
-             # Associate's ,Health Sciences,Emergency Medical Services Roles
-
+             # masters , STEM,Engineering roles
              {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Health Sciences Sub Domain":"Emergency Medical Services"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Emergency Medical Services Roles}. I'm eager to Know My Capability Level."
-             },
-
-             {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Health Sciences Sub Domain":"Emergency Medical Services"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Emergency Medical Services Roles}. I'm eager to Know My Capability Level."
-             },
-
-             # Associate's ,Social Sciences,Psychology Roles
-
-             {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Social Sciences Sub Domain":"Nursing"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Psychology Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Offline"},{"STEM Master's Sub Domain":"Engineering"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Engineering Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Social Sciences Sub Domain":"Nursing"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Psychology Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Online"},{"STEM Master's Sub Domain":"Engineering"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Engineering Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
-
-             # Associate's ,Social Sciences,Social Sciences Roles
-
+             # masters , STEM,Mathematics roles
              {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Social Sciences Sub Domain":"Sociology"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Sociology Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Offline"},{"STEM Master's Sub Domain":"Mathematics"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Mathematics Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Social Sciences Sub Domain":"Sociology"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Sociology Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Online"},{"STEM Master's Sub Domain":"Mathematics"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Mathematics Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
-
-             # Associate's ,Social Sciences,Criminal Justice Roles
-
+             # masters , STEM,Biotechnology roles
              {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Social Sciences Sub Domain":"Criminal Justice"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Criminal Justice Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Offline"},{"STEM Master's Sub Domain":"Biotechnology"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Biotechnology Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Social Sciences Sub Domain":"Criminal Justice"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Criminal Justice Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Online"},{"STEM Master's Sub Domain":"Biotechnology"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Biotechnology Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
-
-             # Associate's ,Social Sciences,Early Childhood Education Roles
-
+             # masters ,Business,MBA roles
              {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Social Sciences Sub Domain":"Early Childhood Education"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Early Childhood Education Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Offline"},{"Business Master's Sub Domain":"Master of Business Administration (MBA)"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {MBA Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Social Sciences Sub Domain":"Early Childhood Education"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Early Childhood Education Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Online"},{"Business Master's Sub Domain":"Master of Business Administration (MBA)"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {MBA Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
-
-             # Associate's ,Social Sciences,Human Services Roles
-
+             # masters ,Business,Human Resource Management roles
              {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Offline"},{"Social Sciences Sub Domain":"Human Services"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Human Services Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Offline"},{"Business Master's Sub Domain":"Human Resource Management"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Human Resource Management Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
              {
-                "condition": {"$and": [{"education_level": "Associate's Degree"},{"Learning Mode": "Online"},{"Social Sciences Sub Domain":"Human Services"}]},
-                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Associate's Degree Domain} and having a goal to become {Human Services Roles}. I'm eager to Know My Capability Level."
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Online"},{"Business Master's Sub Domain":"Human Resource Management"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Human Resource Management Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+             # masters ,Business,International Business roles
+             {
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Offline"},{"Business Master's Sub Domain":"International Business"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {International Business Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Online"},{"Business Master's Sub Domain":"International Business"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {International Business Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+             # masters ,Engineering ,Electrical Engineering Roles
+             {
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Offline"},{"Engineering Master's Sub Domain":"Electrical Engineering"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Electrical Engineering PhD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Online"},{"Engineering Master's Sub Domain":"Electrical Engineering"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Electrical Engineering Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             # masters ,Engineering ,Mechanical Engineering Roles
+             {
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Offline"},{"Engineering Master's Sub Domain":"Mechanical Engineering"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Mechanical Engineering Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Online"},{"Engineering Master's Sub Domain":"Mechanical Engineering"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Mechanical Engineering Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             # masters ,Engineering ,Chemical Engineering Roles
+             {
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Offline"},{"Engineering Master's Sub Domain":"Chemical Engineering"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Chemical Engineering Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Online"},{"Engineering Master's Sub Domain":"Chemical Engineering"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Chemical Engineering Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             # masters ,Engineering ,Civil Engineering Roles
+             {
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Offline"},{"Engineering Master's Sub Domain":"Civil Engineering"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Civil Engineering Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Online"},{"Engineering Master's Sub Domain":"Civil Engineering"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Civil Engineering Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             # masters ,Engineering ,Computer Engineering Roles
+             {
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Offline"},{"Engineering Master's Sub Domain":"Computer Engineering"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Computer Engineering Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "Master's Degree"},{"Learning Mode": "Online"},{"Engineering Master's Sub Domain":"Computer Engineering"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {Master's Degree Domain} and having a goal to become {Computer Engineering Master's Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
              },
 
 
+             # PhD ,Engineering ,Electrical Engineering PhD Roles
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Offline"},{"Engineering PhD Sub Domain":"Electrical Engineering"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Electrical Engineering PhD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
 
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Online"},{"Engineering PhD Sub Domain":"Electrical Engineering"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Electrical Engineering PhD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
 
-        ],
-        "show_prompt": True,
-        "allow_skip": True
-    },
-    "phase2": {
-        "name": "Career Preferences",
-        "fields": {
-            "preferred_working_style": {
-                "type": "radio",
-                "label": "What is your preferred working style?",
-                "options": ["Team-oriented", "Independent"]
-            },
-            "technical_or_non_technical": {
-                "type": "radio",
-                "label": "Do you prefer a technical or non-technical role?",
-                "options": ["Technical", "Non-technical"]
-            },
-            "willing_to_relocate": {
-                "type": "radio",
-                "label": "Are you willing to relocate?",
-                "options": ["Yes", "No"],
-            },
-            "desired_salary": {
-                "type": "number_input",
-                "label": "What is your desired salary? (in $K)",
-                "min_value": 30,
-                "max_value": 300,
-                "value": 60
-            }
-        },
-        "phase_instructions": "Let us know more about your career preferences.",
-        "user_prompt": [
-            {
-                "condition": {"$and": [
-                    {"preferred_working_style": "Independent"},
-                    {"technical_or_non_technical": "Technical"}
-                ]},
-                "prompt": "I prefer working independently and I am interested in a technical role. I have {experience_years} years of experience in {current_field}, and I am looking for a career that suits my skills and preferences."
-            },
-            {
-                "condition": {"$and": [
-                    {"preferred_working_style": "Independent"},
-                    {"technical_or_non_technical": "Non-technical"}
-                ]},
-                "prompt": "I prefer working independently in a non-technical role. I have {experience_years} years of experience in {current_field}, and I am looking for a career that allows me to leverage my skills in a flexible work environment."
-            },
-            {
-                "condition": {"$and": [
-                    {"preferred_working_style": "Team-oriented"},
-                    {"technical_or_non_technical": "Technical"}
-                ]},
-                "prompt": "I enjoy working in a team and am interested in a technical role. I have {experience_years} years of experience in {current_field}, and I am looking for a collaborative environment where I can contribute my technical skills."
-            },
-            {
-                "condition": {"$and": [
-                    {"preferred_working_style": "Team-oriented"},
-                    {"technical_or_non_technical": "Non-technical"}
-                ]},
-                "prompt": "I enjoy working in a team and prefer non-technical roles. I have {experience_years} years of experience in {current_field}, and I am looking for a career that aligns with my interests and abilities."
-            },
-            {
-                "condition": {"$and": [
-                    {"willing_to_relocate": "Yes"},
-                    {"desired_salary": {"$gt": 100}}
-                ]},
-                "prompt": "I am open to relocating for a job opportunity, and I am aiming for a salary above $100K. Please suggest a career path that fits these preferences."
-            }
+             # PhD ,Engineering ,Mechanical Engineering PhD Roles
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Offline"},{"Engineering PhD Sub Domain":"Mechanical Engineering"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Mechanical Engineering PhD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Online"},{"Engineering PhD Sub Domain":"Mechanical Engineering"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Mechanical Engineering PhD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             # PhD ,Engineering ,Chemical Engineering PhD Roles
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Offline"},{"Engineering PhD Sub Domain":"Chemical Engineering"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Chemical Engineering PhD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Online"},{"Engineering PhD Sub Domain":"Chemical Engineering"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Chemical Engineering PhD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             # PhD ,Engineering ,Civil Engineering PhD Roles
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Offline"},{"Engineering PhD Sub Domain":"Civil Engineering"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Civil Engineering PhD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Online"},{"Engineering PhD Sub Domain":"Civil Engineering"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Civil Engineering PhD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             # PhD ,Engineering ,Computer Engineering PhD Roles
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Offline"},{"Engineering PhD Sub Domain":"Computer Engineering"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Computer Engineering PhD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Online"},{"Engineering PhD Sub Domain":"Computer Engineering"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Computer Engineering PhD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+             # phD , STEM,Computer Science roles
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Offline"},{"STEM PhD Sub Domain":"Computer Science"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Computer Science phD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Online"},{"STEM PhD Sub Domain":"Computer Science"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Computer Science phD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             # phD , STEM,Data Science roles
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Offline"},{"STEM PhD Sub Domain":"Data Science"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Data Science phD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Online"},{"STEM PhD Sub Domain":"Data Science"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Data Science phD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             # phD , STEM,Engineering roles
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Offline"},{"STEM PhD Sub Domain":"Engineering"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Engineering phD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Online"},{"STEM PhD Sub Domain":"Engineering"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Engineering phD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+             # phD , STEM,Mathematics roles
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Offline"},{"STEM PhD Sub Domain":"Mathematics"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Mathematics phD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Online"},{"STEM PhD Sub Domain":"Mathematics"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Mathematics phD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+             # phD , STEM,Biotechnology roles
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Offline"},{"STEM PhD Sub Domain":"Biotechnology"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Biotechnology phD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Online"},{"STEM PhD Sub Domain":"Biotechnology"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Biotechnology phD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+             # phD ,Business,MBA roles
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Offline"},{"Business PhD Sub Domain":"Master of Business Administration (MBA)"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {MBA phD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Online"},{"Business PhD Sub Domain":"Master of Business Administration (MBA)"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {MBA phD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+             # phD ,Business,Human Resource Management roles
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Offline"},{"Business PhD Sub Domain":"Human Resource Management"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Human Resource Management phD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Online"},{"Business PhD Sub Domain":"Human Resource Management"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {Human Resource Management phD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+             # phD ,Business,International Business roles
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Offline"},{"Business PhD Sub Domain":"International Business"}]},
+                 "prompt": "I am {name}, I recently completed my {education_level} in Offline mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {International Business phD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
+
+             {
+                "condition": {"$and": [{"education_level": "PhD"},{"Learning Mode": "Online"},{"Business PhD Sub Domain":"International Business"}]},
+                "prompt": "I am {name}, I recently completed my {education_level} in Online mode and have {Skills} skills with academic percentage of {Academic Performance} %  and with {Certifications} certifications in {PhD Domain} and having a goal to become {International Business phD Roles}. I have {Years of Experience} years of experience in my chosen field, would rate my proficiency as {Proficiency Level}, and prefer to work in a {Preferred Work Environment}. I have worked on {Project Experience}, My soft skills include {Soft Skills}. My primary career goal in the next 5 years is {Career Goals}, and I prefer to learn new skills through {Learning Preferences}. I'm interested in working in the {Industry Interests} industry and have faced challenges such as {Challenges}. I have experience using tools and technologies like {Tools and Technologies}. I have {Publication Experience} related to my work. My teamwork preference is {Teamwork Preference}. Additionally, I hold memberships in professional organizations like {Professional Memberships}. I'm eager to Know My Capability Level."
+             },
         ],
         "show_prompt": True,
         "allow_skip": True
     }
-}
+    }
 
 PREFERRED_LLM = "gpt-4o-mini"
 LLM_CONFIG_OVERRIDE = {}
