@@ -11,7 +11,5 @@ SIDEBAR_HIDDEN = False  # Set to True to completely hide the sidebar
 
 # 3. Templates
 TEMPLATES = {
-    "ai_assessment": "config",
-    "Zodiac Symbol": "config_zodiac",
     "Career Advisor": "config_career_path"
 }
